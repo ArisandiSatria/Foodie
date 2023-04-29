@@ -1,29 +1,36 @@
 const content = document.getElementById("content");
 
 content.innerHTML = `<div class="container">
-      <div class="flex justify-between items-center my-28 w-full">
-        <div class="copywrite w-2/4">
-          <h1 class="text-5xl font-semibold text-cyan-900 mb-6">Temukan gaya hidup sehat yang
+      <div
+        class="flex md:justify-around lg:justify-between items-center flex-col-reverse md:flex-row my-12 md:my-20 w-full">
+        <div class="copywrite text-center p-5 md:text-start md:w-1/2">
+          <h1 class="text-2xl lg:text-5xl font-semibold text-cyan-900 mb-6">Temukan gaya
+            hidup sehat yang
             tepat untukmu dengan
             panduan diet
             terpercaya kami
           </h1>
-          <p class="text-slate-500 mb-6">Ayo ukur indeks massa tubuh anda sekarang!</p>
-          <button type="submit" class="bg-cyan-900 text-white rounded-sm p-2 text-lg">Ke Kalkultor BMI</button>
+          <p class="text-slate-500 mb-6 text-sm md:text-md">Ayo ukur indeks massa tubuh anda sekarang!</p>
+          <button type="submit"
+            class="border-2 border-cyan-900 text-cyan-900 rounded-sm p-2 text-md md:text-lg md:hover:scale-110 transition duration-150 active:bg-cyan-900 active:text-white">Ke
+            Kalkultor
+            BMI</button>
         </div>
-        <div class="hero-img w-2/4">
-          <img src="source/image/hero-removebg.png" alt="" class="">
+        <div class="hero-img md:block md:w-5/12 lg:block lg:w-2/4">
+          <img src="source/image/hero-removebg.png">
         </div>
       </div>
 
-      <div class="flex justify-between items-center gap-x-12 my-28 w-full">
-        <div class="w-2/4">
-          <img src="source/image/benefit-removebg.png" alt="">
+      <div class="flex justify-between items-center gap-x-12 my-12 md:my-20 w-full">
+        <div class="hidden lg:block lg:w-1/2">
+          <img src="source/image/benefit-removebg.png">
         </div>
-        <div class="benefit w-5/12">
-          <h3 class="text-xl font-medium mb-16 text-cyan-900">Keuntungan dari Kami</h3>
-          <div class="flex flex-wrap gap-12">
-            <div class="card w-56">
+        <div class="benefit w-full text-center lg:w-5/12">
+          <h3 class="text-xl text-center lg:text-start font-medium mb-10 md:mb-16 text-cyan-900">Keuntungan dari Kami
+          </h3>
+          <div class="flex flex-wrap gap-5 mx-10 md:mx-0 md:gap-7 lg:gap-12">
+            <div
+              class="card border border-cyan-900 p-4 rounded-lg flex flex-col justify-center items-center md:block md:border-0 md:p-0 w-full md:w-40 lg:w-56">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
                 class="w-6 h-6 text-cyan-900">
                 <path
@@ -33,7 +40,8 @@ content.innerHTML = `<div class="container">
               <h4 class="text-lg font-medium text-cyan-900">Lebih Sehat</h4>
               <p class="text-slate-500">Imunitas akan lebih kuat dengan tubuh yang sehat</p>
             </div>
-            <div class="card w-56">
+            <div
+              class="card border border-cyan-900 p-4 rounded-lg flex flex-col justify-center items-center md:block md:border-0 md:p-0 w-full md:w-40 lg:w-56">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
                 class="w-6 h-6 text-cyan-900">
                 <path fill-rule="evenodd"
@@ -44,7 +52,8 @@ content.innerHTML = `<div class="container">
               <h4 class="text-lg font-medium text-cyan-900">Energi Meningkat</h4>
               <p class="text-slate-500">Dengan banyak energi, maka banyak yang bisa anda lakukan</p>
             </div>
-            <div class="card w-56">
+            <div
+              class="card border border-cyan-900 p-4 rounded-lg flex flex-col justify-center items-center md:block md:border-0 md:p-0 w-full md:w-40 lg:w-56">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
                 class="w-6 h-6 text-cyan-900">
                 <path fill-rule="evenodd"
@@ -55,7 +64,8 @@ content.innerHTML = `<div class="container">
               <h4 class="text-lg font-medium text-cyan-900">Menjaga Berat Badan</h4>
               <p class="text-slate-500">Tubuh lebih ringan dan tidak mudah lelah</p>
             </div>
-            <div class="card w-56">
+            <div
+              class="card border border-cyan-900 p-4 rounded-lg flex flex-col justify-center items-center md:block md:border-0 md:p-0 w-full md:w-40 lg:w-56">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
                 class="w-6 h-6 text-cyan-900">
                 <path fill-rule="evenodd"
@@ -69,80 +79,80 @@ content.innerHTML = `<div class="container">
           </div>
         </div>
       </div>
-      <div class="package flex flex-col justify-between items-center gap-x-12 my-28 w-full">
-        <h3 class="text-xl font-medium mb-16 text-cyan-900">Pilih Paket</h3>
-        <div class="flex justify-around w-full">
+      <div class="package flex flex-col justify-between items-center gap-x-12 my-12 md:my-20 w-full">
+        <h3 class="text-xl font-medium mb-10 md:mb-16 text-cyan-900">Pilih Paket</h3>
+        <div class="md:flex md:justify-around w-full md:gap-x-5">
           <div
-            class="plan bg-white text-cyan-900 p-10 w-1/4 rounded-lg drop-shadow-lg flex flex-col justify-between hover:scale-110 duration-150">
+            class="plan bg-white text-cyan-900 p-8 lg:p-10 mb-8 md:mb-0 md:w-2/3 lg:w-1/4 rounded-lg drop-shadow-lg flex flex-col justify-between lg:hover:scale-110 duration-150">
             <div class="h-full">
               <p class="text-lg w-full text-center font-medium mb-4">Free</p>
-              <p class="mb-4 text-2xl">Rp 0/bulan</p>
-              <ul class="list-disc">
-                <li>E-book panduan diet</li>
-                <li>Akses ke artikel-artikel tentang diet</li>
-                <li>Newsletter tentang tips dan trik diet</li>
-                <li>Tidak ada biaya berlangganan</li>
+              <p class="mb-4 text-xl text-center font-bold md:text-start md:text-lg lg:text-2xl">Rp 0/bulan</p>
+              <ul class="list-disc ">
+                <li class="md:text-sm">E-book panduan diet</li>
+                <li class="md:text-sm">Akses ke artikel-artikel tentang diet</li>
+                <li class="md:text-sm">Newsletter tentang tips dan trik diet</li>
+                <li class="md:text-sm">Tidak ada biaya berlangganan</li>
             </div>
             </ul>
             <button type="submit"
-              class="p-1.5 w-full text-center mt-10 border border-cyan-900 text-cyan-900 rounded-md text-md hover:scale-110 transition active:bg-cyan-900 active:text-white active:text-cyan-900 duration-150">
+              class="p-1.5 w-full text-center mt-10 border border-cyan-900 text-cyan-900 rounded-md text-md transform lg:hover:scale-110 transition active:bg-cyan-900 active:text-white active:text-cyan-900 duration-150">
               Pilih
             </button>
           </div>
           <div
-            class="plan bg-white text-cyan-900 p-10 w-1/4 rounded-lg drop-shadow-lg flex flex-col justify-between hover:scale-110 duration-150">
+            class="plan bg-white text-cyan-900 p-8 lg:p-10 mb-8 md:mb-0 md:w-2/3 lg:w-1/4 rounded-lg drop-shadow-lg flex flex-col justify-between lg:hover:scale-110 duration-150">
             <div class="h-full">
               <p class="text-lg w-full text-center font-medium mb-4">Premium</p>
-              <p class="mb-4 text-2xl">Rp 149.999/bulan</p>
-              <ul class="list-disc">
-                <li>Semua fitur dari paket Free</li>
-                <li>Program diet khusus yang dipersonalisasi oleh ahli nutrisi</li>
-                <li>Video tutorial olahraga</li>
+              <p class="mb-4 text-xl text-center font-bold md:text-start md:text-lg lg:text-2xl">Rp 149.999/bulan
+              </p>
+              <ul class="list-disc md:text-md">
+                <li class="md:text-sm">Semua fitur dari paket Free</li>
+                <li class="md:text-sm">Program diet khusus yang dipersonalisasi oleh ahli nutrisi</li>
+                <li class="md:text-sm">Video tutorial olahraga</li>
               </ul>
             </div>
             <button type="submit"
-              class="p-1.5 w-full text-center mt-10 border border-cyan-900 text-cyan-900 rounded-md text-md hover:scale-110 transition active:bg-cyan-900 active:text-white active:text-cyan-900 duration-150">
+              class="p-1.5 w-full text-center mt-10 border border-cyan-900 text-cyan-900 rounded-md text-md transform lg:hover:scale-110 transition active:bg-cyan-900 active:text-white active:text-cyan-900 duration-150">
               Pilih
             </button>
           </div>
           <div
-            class="plan bg-white text-cyan-900 p-10 w-1/4 rounded-lg drop-shadow-lg flex flex-col justify-between hover:scale-110 duration-150">
+            class="plan bg-white text-cyan-900 p-8 lg:p-10 mb-8 md:mb-0 md:w-2/3 lg:w-1/4 rounded-lg drop-shadow-lg flex flex-col justify-between lg:hover:scale-110 duration-150">
             <div class="h-full">
               <p class="text-lg w-full text-center font-medium mb-4">Ultimate</p>
-              <p class="mb-4 text-2xl">Rp 249.999/bulan</p>
-              <ul class="list-disc">
-                <li>Semua fitur dari paket Premium</li>
-                <li>Konsultasi dengan ahli nutrisi secara langsung</li>
-                <li>Dukungan pelanggan yang lebih cepat</li>
-                <li>Akses ke acara seminar diet eksklusif</li>
+              <p class="mb-4 text-xl text-center font-bold md:text-start md:text-lg lg:text-2xl">Rp 249.999/bulan
+              </p>
+              <ul class="list-disc md:text-md">
+                <li class="md:text-sm">Semua fitur dari paket Premium</li>
+                <li class="md:text-sm">Konsultasi dengan ahli nutrisi secara langsung</li>
+                <li class="md:text-sm">Dukungan pelanggan yang lebih cepat</li>
+                <li class="md:text-sm">Akses ke acara seminar diet eksklusif</li>
               </ul>
             </div>
             <button type="submit"
-              class="p-1.5 w-full text-center mt-10 border border-cyan-900 text-cyan-900 rounded-md text-md hover:scale-110 transition active:bg-cyan-900 active:text-white active:text-cyan-900 duration-150">
+              class="p-1.5 w-full text-center mt-10 border border-cyan-900 text-cyan-900 rounded-md text-md transform lg:hover:scale-110 transition active:bg-cyan-900 active:text-white active:text-cyan-900 duration-150">
               Pilih
             </button>
-
-
           </div>
         </div>
       </div>
-
-      <div class="testimony flex flex-col justify-between items-center gap-x-12 my-28 w-full">
-        <h3 class="text-xl font-medium mb-16 text-cyan-900">Apa Kata Mereka?</h3>
-        <div class="flex justify-center items-center gap-x-10 bg-white p-5 rounded-lg drop-shadow-lg">
-          <div class="text-center">
-            <img src="source/image/testimony-removebg.png" alt="" class="bg-cyan">
+      <div class="testimony flex flex-col justify-between items-center gap-x-12 md:my-20 w-full">
+        <h3 class="text-xl font-medium mb-10 md:mb-16 text-cyan-900">Apa Kata Mereka?</h3>
+        <div
+          class="flex flex-col md:flex-row justify-center items-center gap-y-7 md:gap-y-0 md:gap-x-10 bg-white p-5 rounded-lg drop-shadow-lg">
+          <div class="text-center w-1/2 md:w-1/3">
+            <img src="source/image/testimony-removebg.png" class="bg-cyan">
           </div>
-
-          <div class="w-2/6 pl-12 border-slate-300 border-l-2 flex flex-col gap-y-4">
+          <div
+            class="w-full text-center md:text-start md:w-1/3 md:pl-12 border-slate-300 md:border-l-2 flex flex-col gap-y-4 md:gap-y-7">
             <h4 class="text-lg font-medium">Eren Yaeger</h4>
             <p>This diet program make me want to rumble the world once again</p>
-            <div class="flex">
-              <img src="source/image/icon/star.svg" alt="">
-              <img src="source/image/icon/star.svg" alt="">
-              <img src="source/image/icon/star.svg" alt="">
-              <img src="source/image/icon/star.svg" alt="">
-              <img src="source/image/icon/star.svg" alt="">
+            <div class="flex justify-center md:justify-start w-full">
+              <img src="source/image/icon/star.svg">
+              <img src="source/image/icon/star.svg">
+              <img src="source/image/icon/star.svg">
+              <img src="source/image/icon/star.svg">
+              <img src="source/image/icon/star.svg">
             </div>
             <p class="text-sm text-slate-500">2/22/2222</p>
           </div>
