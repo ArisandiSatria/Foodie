@@ -13,7 +13,7 @@
 <body>
   <div class="container flex h-screen w-full">
     <section class="form w-2/4 grid place-items-center">
-      <div class="w-full px-60">
+      <div class="w-screen px-10 md:px-32 lg:w-full lg:px-36">
         <a href="https://flowbite.com/" class="flex items-center mb-10">
           <img src="https://flowbite.com/docs/images/logo.svg" class="h-8 mr-3" alt="Flowbite Logo" />
           <span class="self-center text-2xl font-semibold whitespace-nowrap text-cyan-900">Foodie</span>
@@ -22,7 +22,7 @@
           <h1 class="text-2xl font-medium mb-2">Register</h1>
           <p class="text-sm text-slate-500">Control your diet with Foodie</p>
         </div>
-        <form action="" class="mb-4 flex flex-col">
+        <form id="register-form" class="mb-4 flex flex-col">
           <div class="mb-7 flex flex-col gap-y-6">
             <div class="flex gap-x-2 items-center">
               <label for="username">
@@ -33,7 +33,8 @@
                 </svg>
 
               </label>
-              <input type="text" class="w-full border-2 border-[#c5ced6] p-1.5 rounded-sm" placeholder="Username">
+              <input type="text" id="username" class="w-full border-2 border-[#c5ced6] p-1.5 rounded-sm"
+                placeholder="Username" required>
             </div>
             <div class="flex gap-x-2 items-center">
               <label for="email">
@@ -43,7 +44,8 @@
                     d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z" />
                 </svg>
               </label>
-              <input type="text" class="w-full border-2 border-[#c5ced6] p-1.5 rounded-sm" placeholder="E-mail">
+              <input type="email" id="email" class="w-full border-2 border-[#c5ced6] p-1.5 rounded-sm"
+                placeholder="E-mail" required>
             </div>
             <div class="flex gap-x-2 items-center">
               <label for="password">
@@ -53,13 +55,14 @@
                     clip-rule="evenodd" />
                 </svg>
               </label>
-              <input type="password" class="w-full border-2 border-[#c5ced6] p-1.5 rounded-sm" placeholder="Password">
+              <input type="password" id="password" class="w-full border-2 border-[#c5ced6] p-1.5 rounded-sm"
+                placeholder="Password" required>
             </div>
             <div>
               <ul class="list-disc ml-12 text-sm text-slate-400">
-                <li>Least 8 character</li>
-                <li>Least one number (0-9) or a symbol</li>
-                <li>Lowercase (a-z) and uppercase (A-Z)</li>
+                <li id="password-char">Least 8 character</li>
+                <li id="password-number-and-symbol">Least one number (0-9) and a symbol</li>
+                <li id="password-lower-and-upper">Lowercase (a-z) and uppercase (A-Z)</li>
               </ul>
             </div>
             <div class="flex gap-x-2 items-center">
@@ -70,24 +73,28 @@
                     clip-rule="evenodd" />
                 </svg>
               </label>
-              <input type="password" class="w-full border-2 border-[#c5ced6] p-1.5 rounded-sm"
-                placeholder="Confirm Password">
+              <input type="password" id="confirm-password" class="w-full border-2 border-[#c5ced6] p-1.5 rounded-sm"
+                placeholder="Confirm Password" required>
             </div>
+            <span id="warning" class="hidden italic ml-8 text-red-500">Password doesn't
+              match, please check again!</span>
           </div>
           <div class="text-center">
-            <button type="submit" class="bg-cyan-900 rounded-sm py-1.5 text-white mb-3 w-full">Register</button>
+            <button type="submit" id="btn"
+              class="bg-cyan-900 rounded-sm py-1.5 text-white mb-3 w-full hover:bg-white hover:outline hover:outline-1 hover:outline-cyan-900 hover:text-cyan-900">Register</button>
             <p class="text-sm text-slate-500">Already have an account? Click <span class="text-cyan-900"><a
-                  href="">Here</a></span></p>
+                  href="loginPage.html">Here</a></span></p>
           </div>
         </form>
       </div>
     </section>
-    <section class="image w-2/4">
+    <section class="image w-2/4 hidden lg:block">
       <img src="source/image/login.jpg" class="w-full h-full object-cover" alt="">
     </section>
   </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
+  <script type="module" src="source/javascript/logic/register.js"></script>
 </body>
 
 </html>
