@@ -1,5 +1,3 @@
-import { account } from "./account.js";
-
 const username = document.getElementById("username");
 const email = document.getElementById("email");
 const password = document.getElementById("password");
@@ -79,8 +77,25 @@ confirmPassword.addEventListener("input", () => {
   }
 });
 
+let users = [];
+
+const getUsers = () => {
+  const usersJSON = localStorage.getItem("users");
+  return usersJSON ? JSON.parse(usersJSON) : [];
+};
+
+const saveUsers = (users) => {
+  localStorage.setItem("users", JSON.stringify(users));
+};
+
+users = getUsers();
+
 registerForm.addEventListener("submit", (event) => {
   event.preventDefault();
+
+  const nameUser = username.value.trim();
+  const emailUser = email.value.trim();
+  const passwordUser = confirmPassword.value.trim();
 
   if (
     checkCharacter(password.value) &&
@@ -90,7 +105,13 @@ registerForm.addEventListener("submit", (event) => {
     email.getAttribute("type") == "email" &&
     isPasswordMatch(password.value)
   ) {
-    alert("Akun berhasil dibuat");
-    location.href = "login.js";
+    const user = {
+      nameUser,
+      emailUser,
+      passwordUser,
+    };
+
+    users.push(user);
+    saveUsers(users);
   }
 });
