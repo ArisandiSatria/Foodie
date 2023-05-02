@@ -148,11 +148,11 @@ content.innerHTML = `<div class="container">
             <h4 class="text-lg font-medium">Eren Yaeger</h4>
             <p>This diet program make me want to rumble the world once again</p>
             <div class="flex justify-center md:justify-start w-full">
-              <img src="source/image/icon/star.svg">
-              <img src="source/image/icon/star.svg">
-              <img src="source/image/icon/star.svg">
-              <img src="source/image/icon/star.svg">
-              <img src="source/image/icon/star.svg">
+              <img src="source/images/icon/star.svg">
+              <img src="source/images/icon/star.svg">
+              <img src="source/images/icon/star.svg">
+              <img src="source/images/icon/star.svg">
+              <img src="source/images/icon/star.svg">
             </div>
             <p class="text-sm text-slate-500">2/22/2222</p>
           </div>
