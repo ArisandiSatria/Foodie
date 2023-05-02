@@ -1,4 +1,4 @@
-let header = document.getElementById("header")
+let header = document.getElementById("header");
 header.innerHTML = `
 <nav class="fixed top-0 z-50 w-full bg-cyan-900 border-gray-200 ">
   <div
@@ -70,9 +70,9 @@ header.innerHTML = `
         </ul>
     </div>
   </div>
-</nav>`
+</nav>`;
 
-let footer = document.getElementById("footer")
+let footer = document.getElementById("footer");
 footer.innerHTML = `<footer class="bg-cyan-900 relative bottom-0 w-full">
 <div class="mx-auto w-full max-w-screen-xl p-5 py-6 lg:py-8">
   <div class="md:flex md:justify-between">
@@ -244,4 +244,4 @@ footer.innerHTML = `<footer class="bg-cyan-900 relative bottom-0 w-full">
     </div>
   </div>
 </div>
-</footer>`
+</footer>`;
