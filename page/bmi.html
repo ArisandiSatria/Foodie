@@ -7,21 +7,383 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../source/css/bmi.css" />
     <title>Foodie</title>
   </head>
   <body class="bg-gray-100">
     <div id="header"></div>
     <div
       id="content"
-      class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-5"
+      class="container mx-auto px-3 mt-24 2xl:px-32 xl:px-16 md:px-8"
     >
       <!-- Content -->
-      <p>tes</p>
+      <div id="title">
+        <p class="text-gray-900 text-2xl mb-5 mt-5">
+          Berapa Sih Berat Badan Ideal Kamu?
+        </p>
+        <p class="text-base text-gray-700">
+          Body Mass Index (BMI) adalah angka yang didapat berdasarkan tinggi dan
+          berat badan kamu yang menjadi standar penilaian untuk melihat apakah
+          berat badan kamu kurang, normal atau ideal, berlebih, atau bahkan
+          obesitas.
+          <span id="title-span" class="">
+            Untuk mengetahui angka BMI kamu, dibutuhkan beberapa informasi
+            mendasar:</span
+          >
+        </p>
+      </div>
+
+      <div id="input-bmi" class="">
+        <form id="form-bmi">
+          <div class="flex flex-wrap flex-col lg:flex-row place-content-around">
+            <div class="box">
+              <div class="circle"><p>1</p></div>
+              <p class="text-gray-800">Kamu adalah?</p>
+              <div class="img-box">
+                <input
+                  type="radio"
+                  name="gender"
+                  id="male"
+                  value="male"
+                  class="input-hidden"
+                />
+                <label for="male">
+                  <img src="../source/images/bmi/male.png" />
+                </label>
+                <input
+                  type="radio"
+                  name="gender"
+                  id="female"
+                  value="female"
+                  class="input-hidden"
+                />
+                <label for="female">
+                  <img src="../source/images/bmi/female.png" />
+                </label>
+              </div>
+              <span class="error text-xs"></span>
+            </div>
+            <div class="box">
+              <div class="circle"><p>2</p></div>
+              <p class="text-gray-800">Berapa tinggi badanmu?</p>
+              <div class="input-container">
+                <input
+                  type="text"
+                  id="heightBody"
+                  class="text-lg"
+                  placeholder="170"
+                  onkeypress="return  /^\d{0,3}$/.test(this.value+String.fromCharCode(event.keyCode));"
+                />
+                <span class="text-lg text-gray-500">cm</span>
+              </div>
+              <span class="error text-xs"></span>
+            </div>
+            <div class="box">
+              <div class="circle"><p>3</p></div>
+              <p class="text-gray-800">Berapa berat badanmu?</p>
+              <div class="input-container">
+                <input
+                  type="text"
+                  id="weightBody"
+                  class="text-lg"
+                  placeholder="70"
+                  onkeypress="return  /^\d{0,3}$/.test(this.value+String.fromCharCode(event.keyCode));"
+                />
+                <span class="unit text-lg text-gray-500">kg</span>
+              </div>
+              <span class="error text-xs"></span>
+            </div>
+          </div>
+          <div class="calculate">
+            <div
+              class="btn-calculate"
+              style="
+                display: flex;
+                align-items: center;
+                justify-content: center;
+              "
+              onclick="calculate()"
+            >
+              <span>Hitung</span>
+              <i
+                class="fas fa-long-arrow-alt-right"
+                style="margin-left: 10px; font-size: 25px"
+              ></i>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div id="output-bmi" class="display-none">
+        <div class="wrap">
+          <div id="img" class="box-output one"></div>
+          <div class="box-output two">
+            <div class="title-output">
+              <div id="info-bmi" class="text-3xl info-bmi text-800"></div>
+              <div id="result-value" class="text-3xl value-bmi text-800"></div>
+            </div>
+            <p id="text-bmi" class="text-sm text-600"></p>
+          </div>
+          <div class="box-output three">
+            <div class="info-weight">
+              <div class="info-weight-body text-700">Kurus</div>
+              <div class="info-weight-number text-700">< 18.5</div>
+            </div>
+            <div class="info-weight">
+              <div class="info-weight-body text-700">Normal</div>
+              <div class="info-weight-number text-700">18.5 – 24.9</div>
+            </div>
+            <div class="info-weight">
+              <div class="info-weight-body text-700">Gemuk</div>
+              <div class="info-weight-number text-700">25 – 29.9</div>
+            </div>
+            <div class="info-weight">
+              <div class="info-weight-body text-700">Obesitas</div>
+              <div class="info-weight-number text-700">> 30</div>
+            </div>
+          </div>
+        </div>
+        <div class="calculate">
+          <a
+            href="https://dietku.netlify.app#register"
+            target="_blank"
+            rel="noopener noreferrer"
+            decoration="none"
+            style="text-decoration: none"
+          >
+            <div class="btn-calculate">Konsultasi</div>
+          </a>
+          <div
+            class="btn-calculate"
+            style="display: flex; align-items: center; justify-content: center"
+            onclick="back()"
+          >
+            <span>Cek ulang</span>
+            <i
+              class="fas fa-redo-alt"
+              style="margin-left: 7px; font-size: 13px"
+            ></i>
+          </div>
+        </div>
+      </div>
+      <div id="qna" class="">
+        <div class="qna-wrap">
+          <div id="faq-warp">
+            <div class="faq">
+              <!-- faq question -->
+              <p class="faq-page text-lg text-gray-100 w-full md:w-1/2">
+                Cara penilaian BMI?
+              </p>
+              <!-- faq answer -->
+              <div class="faq-body w-full md:w-1/2">
+                <p class="text-base text-gray-300">
+                  BMI diukur dengan cara membandingkan berat badan dengan tinggi
+                  badan. Cara ini dapat digunakan untuk orang yang berusia di
+                  atas 18 tahun.
+                  <br />
+                  <br />
+                  Sementara itu, menghitung indeks massa tubuh dengan cara ini
+                  tidak berlaku untuk anak dan remaja (usia di bawah 18 tahun).
+                  Status gizi anak diukur dengan indikator berat badan menurut
+                  usia, tinggi badan menurut usia, dan berat badan menurut
+                  tinggi badan.
+                  <br />
+                  <br />
+                  Nilai BMI yang tidak normal dapat menandakan Anda berisiko
+                  mengalami penyakit tertentu. Namun, menghitung BMI saja tidak
+                  cukup untuk menegakkan suatu diagnosis penyakit. Maka itu,
+                  biasanya dokter akan melakukan tes dan skrining lanjutan.
+                </p>
+              </div>
+            </div>
+            <div class="faq">
+              <!-- faq question -->
+              <p class="faq-page text-lg text-gray-100 w-full md:w-1/2">
+                Mengapa harus mengukur BMI?
+              </p>
+              <!-- faq answer -->
+              <div class="faq-body w-full md:w-1/2">
+                <p class="text-base text-gray-300">
+                  Mengetahui BMI membantu Anda untuk menjaga rasio lemak tubuh
+                  yang terkait dengan tinggi badan Anda. BMI juga memberi
+                  peringatan peluang risiko penyakit yang mungkin mengintai
+                  kesehatan Anda.
+                  <br />
+                  <br />
+                  BMI yang sehat umumnya mengarah pada kualitas hidup yang lebih
+                  bahagia dan lebih sehat. Sementara BMI yang tinggi berkaitan
+                  erat dengan risiko penyakit seperti diabetes tipe 2, penyakit
+                  jantung, dan tekanan darah tinggi.
+                  <br />
+                  <br />
+                  Mengetahui BMI berarti memberi pertimbangan bagi Anda dan
+                  tenaga kesehatan dalam mengambil keputusan mengenai kondisi
+                  kesehatan tubuh Anda.
+                </p>
+              </div>
+            </div>
+            <div class="faq">
+              <!-- faq question -->
+              <p class="faq-page text-lg text-gray-100 w-full md:w-1/2">
+                Apakah nilai BMI yang tinggi menimbulkan risiko kesehatan yang
+                serius?
+              </p>
+              <!-- faq answer -->
+              <div class="faq-body w-full md:w-1/2">
+                <p class="text-base text-gray-300">
+                  BMI dapat menjadi alat skrining, tetapi bukan tolok ukur
+                  diagnosis kegemukan atau kesehatan tubuh seseorang. Untuk
+                  menentukan apakah BMI Anda menunjukkan risiko kesehatan
+                  tertentu, Anda perlu mendapatkan penilaian ke tenaga kesehatan
+                  lebih lanjut.
+                </p>
+              </div>
+            </div>
+            <div class="faq">
+              <!-- faq question -->
+              <p class="faq-page text-lg text-gray-100 w-full md:w-1/2">
+                Apa faktor risiko dari obesitas?
+              </p>
+              <!-- faq answer -->
+              <div class="faq-body w-full md:w-1/2">
+                <p class="text-base text-gray-300">
+                  Jika Anda memiliki BMI 30 ke atas, Anda dikategorikan
+                  obesitas. Obesitas membawa efek bagi tubuh, meningkatkan
+                  risiko kematian, serta mengembangkan kondisi kesehatan
+                  tertentu, seperti:
+                </p>
+                <ul class="text-base text-gray-300">
+                  <li>Diabetes tipe 2</li>
+                  <li>
+                    Kolesterol LDL tinggi, kolesterol HDL rendah, atau kadar
+                    lipid darah yang tidak sehat
+                  </li>
+                  <li>Penyakit jantung koroner</li>
+                  <li>Stroke</li>
+                  <li>Penyakit kantung empedu</li>
+                  <li>Osteoartritis</li>
+                  <li>Sleep apnea dan masalah pernapasan</li>
+                  <li>Peradangan kronis dan peningkatan stres oksidatif</li>
+                  <li>Kanker</li>
+                  <li>
+                    Depresi klinis, kecemasan, dan kondisi kesehatan mental
+                    lainnya
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="faq">
+              <!-- faq question -->
+              <p class="faq-page text-lg text-gray-100 w-full md:w-1/2">
+                Apa faktor risiko dari kekurangan berat badan?
+              </p>
+              <!-- faq answer -->
+              <div class="faq-body w-full md:w-1/2">
+                <p class="text-base text-gray-300">
+                  Jika IMT Anda di bawah 18,5, berat badan Anda termasuk kurang.
+                  Ketika berat badan Anda cukup rendah dari berat ideal, Anda
+                  juga memiliki risiko penyakit tertentu akibat kekurangan
+                  nutrisi dan sistem kekebalan tubuh yang lemah. seperti:
+                </p>
+                <ul class="text-base text-gray-300">
+                  <li>Malnutrisi</li>
+                  <li>Anemia</li>
+                  <li>Osteoporosis karena kekurangan kalsium dan vitamin D</li>
+                  <li>
+                    Masalah kesuburan dari siklus menstruasi tidak teratur
+                  </li>
+                  <li>Risiko komplikasi operasi yang lebih tinggi</li>
+                  <li>
+                    Pertumbuhan dan masalah perkembangan yang terhambat pada
+                    anak dan remaja
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="faq">
+              <!-- faq question -->
+              <p class="faq-page text-lg text-gray-100 w-full md:w-1/2">
+                Apakah nilai BMI menjadi indikator yang baik untuk mengukur
+                lemak tubuh?
+              </p>
+              <!-- faq answer -->
+              <div class="faq-body w-full md:w-1/2">
+                <p class="text-base text-gray-300">
+                  BMI dan tingkat kegemukan tubuh mungkin memiliki korelasi yang
+                  kuat, tetapi bukan berarti dua orang dengan BMI yang sama
+                  memiliki hasil tingkat lemak tubuh yang sama juga.
+                  <br />
+
+                  Hal ini tergantung pada tipe tubuh, usia, jenis, kelamin, dan
+                  tingkat kebugaran. Bahkan pada BMI yang sama, atlet memiliki
+                  lebih sedikit lemak tubuh dibandingkan mereka yang bukan
+                  atlet.
+                  <br />
+                  <br />
+                  Bahkan, orang yang lebih tua akan memiliki lemak yang lebih
+                  banyak dibandingkan orang yang lebih muda, termasuk wanita
+                  memiliki lebih banyak lemak tubuh dibandingkan pria.
+                  <br />
+                  Tenaga kesehatan yang terlatih akan mengevaluasi kesehatan
+                  individu berdasarkan status dan risikonya.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div
+            id="recommend"
+            class="display-none pl-2 w-full md:w-1/2 md:pl-16"
+          >
+            <p class="text-lg text-gray-100">Rekomendasi</p>
+            <ul id="recommend-underweight" class="display-none">
+              <li class="text-gray-300">
+                Konsumsi makanan sehat dengan frekuensi lebih sering untuk
+                menaikkan berat badan.
+              </li>
+              <li class="text-gray-300">
+                Hindari konsumsi obat penambah berat badan instan.
+              </li>
+              <li class="text-gray-300">
+                Bentuk tubuh dengan olahraga angkat beban atau fleksibilitas.
+              </li>
+            </ul>
+            <ul id="recommend-normal" class="display-none">
+              <li class="text-gray-300">
+                Tetap konsumsi makanan sehat dan bergizi seimbang.
+              </li>
+              <li class="text-gray-300">
+                Tetap aktif bergerak 30 menit per hari.
+              </li>
+            </ul>
+            <ul id="recommend-overweight" class="display-none">
+              <li class="text-gray-300">
+                Atur pola makan dengan membatasi konsumsi makanan tinggi kalori,
+                pemanis buatan, dan gula.
+              </li>
+              <li class="text-gray-300">
+                Tetap aktif bergerak 30 menit per hari.
+              </li>
+              <li class="text-gray-300">
+                Penurunan berat badan yang direkomendasikan adalah 0.5-1 kg
+                setiap pekan.
+              </li>
+              <li class="text-gray-300">
+                Hindari konsumsi penurun berat badan instan.
+              </li>
+              <li class="text-gray-300">
+                Lakukan olahraga 3-4 kali per minggu selama 30 menit, misalnya
+                bersepeda atau berjalan kaki.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
       <!-- Content -->
     </div>
     <div id="footer"></div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
+    <script src="../source/javascript/script.js"></script>
     <script src="../source/javascript/loadHeaderFooter.js"></script>
     <!-- <script src="source/javascript/script.js"></script> -->
   </body>
