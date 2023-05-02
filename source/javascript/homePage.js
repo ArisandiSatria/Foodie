@@ -17,13 +17,13 @@ content.innerHTML = `<div class="container">
             BMI</button>
         </div>
         <div class="hero-img md:block md:w-5/12 lg:block lg:w-2/4">
-          <img src="source/image/hero-removebg.png">
+          <img src="source/images/home/hero-removebg.png">
         </div>
       </div>
 
       <div class="flex justify-between items-center gap-x-12 my-12 md:my-20 w-full">
         <div class="hidden lg:block lg:w-1/2">
-          <img src="source/image/benefit-removebg.png">
+          <img src="source/images/home/benefit-removebg.png">
         </div>
         <div class="benefit w-full text-center lg:w-5/12">
           <h3 class="text-xl text-center lg:text-start font-medium mb-10 md:mb-16 text-cyan-900">Keuntungan dari Kami
@@ -141,7 +141,7 @@ content.innerHTML = `<div class="container">
         <div
           class="flex flex-col md:flex-row justify-center items-center gap-y-7 md:gap-y-0 md:gap-x-10 bg-white p-5 rounded-lg drop-shadow-lg">
           <div class="text-center w-1/2 md:w-1/3">
-            <img src="source/image/testimony-removebg.png" class="bg-cyan">
+            <img src="source/images/home/testimony-removebg.png">
           </div>
           <div
             class="w-full text-center md:text-start md:w-1/3 md:pl-12 border-slate-300 md:border-l-2 flex flex-col gap-y-4 md:gap-y-7">

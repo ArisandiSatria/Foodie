@@ -1,6 +1,6 @@
 let header = document.getElementById("header");
 header.innerHTML = `
-<nav class="bg-cyan-900 border-gray-200 ">
+<nav class="fixed top-0 z-50 w-full bg-cyan-900 border-gray-200 ">
   <div
     class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-5"
   >
@@ -73,7 +73,7 @@ header.innerHTML = `
 </nav>`;
 
 let footer = document.getElementById("footer");
-footer.innerHTML = `<footer class="bg-cyan-900 w-full">
+footer.innerHTML = `<footer class="bg-cyan-900 relative bottom-0 w-full">
 <div class="mx-auto w-full max-w-screen-xl p-5 py-6 lg:py-8">
   <div class="md:flex md:justify-between">
     <div class="mb-6 md:mb-0">
