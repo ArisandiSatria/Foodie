@@ -128,8 +128,8 @@ registerForm.addEventListener("submit", (event) => {
       }
     });
 
-    // users.push(user);
-    // saveUsers(users);
-    // location.href = "loginPage.html";
+    users.push(user);
+    saveUsers(users);
+    location.href = "loginPage.html";
   }
 });
