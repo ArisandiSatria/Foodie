@@ -22,7 +22,7 @@
           <h1 class="text-2xl font-medium mb-2">Login</h1>
           <p class="text-sm text-slate-500">Let's control your diet</p>
         </div>
-        <form action="" class="mb-4 flex flex-col">
+        <form id="login-form" class="mb-4 flex flex-col">
           <div class="mb-7 flex flex-col gap-y-6">
             <div class="flex gap-x-2 items-center">
               <label for="email">
@@ -32,7 +32,8 @@
                     d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z" />
                 </svg>
               </label>
-              <input type="text" class="w-full border-2 border-[#c5ced6] p-1.5 rounded-sm" placeholder="E-mail">
+              <input id="email" type="text" class="w-full border-2 border-[#c5ced6] p-1.5 rounded-sm"
+                placeholder="E-mail">
             </div>
             <div class="flex gap-x-2 items-center">
               <label for="password">
@@ -42,11 +43,13 @@
                     clip-rule="evenodd" />
                 </svg>
               </label>
-              <input type="password" class="w-full border-2 border-[#c5ced6] p-1.5 rounded-sm" placeholder="Password">
+              <input id="password" type="password" class="w-full border-2 border-[#c5ced6] p-1.5 rounded-sm"
+                placeholder="Password">
             </div>
           </div>
           <div class="text-center">
-            <button type="submit" class="bg-cyan-900 rounded-sm py-1.5 text-white mb-3 w-full">Login</button>
+            <button type="submit"
+              class="bg-cyan-900 rounded-sm py-1.5 text-white mb-3 w-full hover:bg-white hover:outline hover:outline-1 hover:outline-cyan-900 hover:text-cyan-900">Login</button>
             <p class="text-sm text-slate-500">Don't have an account? Click <span class="text-cyan-900"><a
                   href="registerPage.html">Here</a></span></p>
           </div>
@@ -59,6 +62,7 @@
   </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
+  <script src="../source/javascript/logic/login.js"></script>
 </body>
 
 </html>
