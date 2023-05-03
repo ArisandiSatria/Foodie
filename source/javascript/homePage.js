@@ -3,7 +3,7 @@ const content = document.getElementById("content");
 content.innerHTML = `<div class="container">
       <div
         class="flex md:justify-around lg:justify-between items-center flex-col-reverse md:flex-row my-12 md:my-20 w-full">
-        <div class="copywrite text-center p-5 md:text-start md:w-1/2">
+        <div id="home" class="copywrite text-center p-5 md:text-start md:w-1/2">
           <h1 class="text-2xl lg:text-5xl font-semibold text-cyan-900 mb-6">Temukan gaya
             hidup sehat yang
             tepat untukmu dengan
@@ -17,13 +17,13 @@ content.innerHTML = `<div class="container">
             BMI</button>
         </div>
         <div class="hero-img md:block md:w-5/12 lg:block lg:w-2/4">
-          <img src="source/image/hero-removebg.png">
+          <img src="source/images/home/hero-removebg.png">
         </div>
       </div>
 
-      <div class="flex justify-between items-center gap-x-12 my-12 md:my-20 w-full">
+      <div id="benefit" class="flex justify-between items-center gap-x-12 my-12 md:my-20 w-full">
         <div class="hidden lg:block lg:w-1/2">
-          <img src="source/image/benefit-removebg.png">
+          <img src="source/images/home/benefit-removebg.png">
         </div>
         <div class="benefit w-full text-center lg:w-5/12">
           <h3 class="text-xl text-center lg:text-start font-medium mb-10 md:mb-16 text-cyan-900">Keuntungan dari Kami
@@ -79,7 +79,7 @@ content.innerHTML = `<div class="container">
           </div>
         </div>
       </div>
-      <div class="package flex flex-col justify-between items-center gap-x-12 my-12 md:my-20 w-full">
+      <div id="package" class="package flex flex-col justify-between items-center gap-x-12 my-12 md:my-20 w-full">
         <h3 class="text-xl font-medium mb-10 md:mb-16 text-cyan-900">Pilih Paket</h3>
         <div class="md:flex md:justify-around w-full md:gap-x-5">
           <div
@@ -136,23 +136,23 @@ content.innerHTML = `<div class="container">
           </div>
         </div>
       </div>
-      <div class="testimony flex flex-col justify-between items-center gap-x-12 md:my-20 w-full">
+      <div id="testimony" class="testimony flex flex-col justify-between items-center gap-x-12 md:my-20 w-full">
         <h3 class="text-xl font-medium mb-10 md:mb-16 text-cyan-900">Apa Kata Mereka?</h3>
         <div
           class="flex flex-col md:flex-row justify-center items-center gap-y-7 md:gap-y-0 md:gap-x-10 bg-white p-5 rounded-lg drop-shadow-lg">
           <div class="text-center w-1/2 md:w-1/3">
-            <img src="source/image/testimony-removebg.png" class="bg-cyan">
+            <img src="source/images/home/testimony-removebg.png">
           </div>
           <div
             class="w-full text-center md:text-start md:w-1/3 md:pl-12 border-slate-300 md:border-l-2 flex flex-col gap-y-4 md:gap-y-7">
             <h4 class="text-lg font-medium">Eren Yaeger</h4>
             <p>This diet program make me want to rumble the world once again</p>
             <div class="flex justify-center md:justify-start w-full">
-              <img src="source/image/icon/star.svg">
-              <img src="source/image/icon/star.svg">
-              <img src="source/image/icon/star.svg">
-              <img src="source/image/icon/star.svg">
-              <img src="source/image/icon/star.svg">
+              <img src="source/images/icon/star.svg">
+              <img src="source/images/icon/star.svg">
+              <img src="source/images/icon/star.svg">
+              <img src="source/images/icon/star.svg">
+              <img src="source/images/icon/star.svg">
             </div>
             <p class="text-sm text-slate-500">2/22/2222</p>
           </div>
