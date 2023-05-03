@@ -45,36 +45,41 @@ header.innerHTML = `
       >
         <li>
           <a
-            href="#"
-            class="block py-2 pl-3 pr-4 text-gray-100 hover:underline underline-offset-4 rounded md:bg-transparent md:p-0 "
+            href="#home"
+            class="navbar-item block py-2 pl-3 pr-4 text-gray-100 hover:underline underline-offset-4 rounded md:bg-transparent md:p-0 "
             aria-current="page"
             >Home</a
           >
         </li>
         <li>
           <a
-            href="#"
-            class="block py-2 pl-3 pr-4 text-gray-100 hover:underline underline-offset-4 rounded md:bg-transparent md:p-0 "
+            href="#benefit"
+            class="navbar-item block py-2 pl-3 pr-4 text-gray-100 hover:underline underline-offset-4 rounded md:bg-transparent md:p-0 "
+            >Benefit</a
+          >
+        </li>
+        <li>
+          <a
+            href="#package"
+            class="navbar-item block py-2 pl-3 pr-4 text-gray-100 hover:underline underline-offset-4 rounded md:bg-transparent md:p-0 "
             >Package</a
           >
         </li>
         <li>
           <a
-            href="#"
-            class="block py-2 pl-3 pr-4 text-gray-100 hover:underline underline-offset-4 rounded md:bg-transparent md:p-0 "
-            >About</a
+            href="#testimony"
+            class="navbar-item block py-2 pl-3 pr-4 text-gray-100 hover:underline underline-offset-4 rounded md:bg-transparent md:p-0 "
+            >Testimony</a
           >
         </li>
         
         <li>
-        <button type="button" class="text-white font-medium bg-gradient-to-br from-amber-600 to-yellow-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-1 text-center my-0">Login</button>
+        <button type="button" class="text-white font-medium bg-gradient-to-br from-amber-600 to-yellow-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-1 text-center my-0"><a href="page/loginPage.html">Login</a></button>
         </li>
         </ul>
     </div>
   </div>
 </nav>`;
-
-
 
 footer.innerHTML = `<footer class="bg-cyan-900 relative bottom-0 w-full">
   <div class="mx-auto w-full max-w-screen-xl p-5 py-6 lg:py-8">

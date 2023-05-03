@@ -3,7 +3,7 @@ const content = document.getElementById("content");
 content.innerHTML = `<div class="container">
       <div
         class="flex md:justify-around lg:justify-between items-center flex-col-reverse md:flex-row my-12 md:my-20 w-full">
-        <div class="copywrite text-center p-5 md:text-start md:w-1/2">
+        <div id="home" class="copywrite text-center p-5 md:text-start md:w-1/2">
           <h1 class="text-2xl lg:text-5xl font-semibold text-cyan-900 mb-6">Temukan gaya
             hidup sehat yang
             tepat untukmu dengan
@@ -21,7 +21,7 @@ content.innerHTML = `<div class="container">
         </div>
       </div>
 
-      <div class="flex justify-between items-center gap-x-12 my-12 md:my-20 w-full">
+      <div id="benefit" class="flex justify-between items-center gap-x-12 my-12 md:my-20 w-full">
         <div class="hidden lg:block lg:w-1/2">
           <img src="source/images/home/benefit-removebg.png">
         </div>
@@ -79,7 +79,7 @@ content.innerHTML = `<div class="container">
           </div>
         </div>
       </div>
-      <div class="package flex flex-col justify-between items-center gap-x-12 my-12 md:my-20 w-full">
+      <div id="package" class="package flex flex-col justify-between items-center gap-x-12 my-12 md:my-20 w-full">
         <h3 class="text-xl font-medium mb-10 md:mb-16 text-cyan-900">Pilih Paket</h3>
         <div class="md:flex md:justify-around w-full md:gap-x-5">
           <div
@@ -136,7 +136,7 @@ content.innerHTML = `<div class="container">
           </div>
         </div>
       </div>
-      <div class="testimony flex flex-col justify-between items-center gap-x-12 md:my-20 w-full">
+      <div id="testimony" class="testimony flex flex-col justify-between items-center gap-x-12 md:my-20 w-full">
         <h3 class="text-xl font-medium mb-10 md:mb-16 text-cyan-900">Apa Kata Mereka?</h3>
         <div
           class="flex flex-col md:flex-row justify-center items-center gap-y-7 md:gap-y-0 md:gap-x-10 bg-white p-5 rounded-lg drop-shadow-lg">
