@@ -33,7 +33,7 @@
                 </svg>
               </label>
               <input id="email" type="text" class="w-full border-2 border-[#c5ced6] p-1.5 rounded-sm"
-                placeholder="E-mail">
+                placeholder="E-mail" required>
             </div>
             <div class="flex gap-x-2 items-center">
               <label for="password">
@@ -44,8 +44,9 @@
                 </svg>
               </label>
               <input id="password" type="password" class="w-full border-2 border-[#c5ced6] p-1.5 rounded-sm"
-                placeholder="Password">
+                placeholder="Password" required>
             </div>
+            <span id="warning" class="hidden italic ml-8 text-red-500"></span>
           </div>
           <div class="text-center">
             <button type="submit"
