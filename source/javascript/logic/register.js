@@ -70,6 +70,7 @@ confirmPassword.addEventListener("input", () => {
   } else {
     warning.classList.remove("hidden");
     warning.classList.add("block");
+    warning.textContent = "Password doesn't match, please check again!";
     password.classList.remove("border-green-500");
     password.classList.add("border-red-500");
     confirmPassword.classList.remove("border-green-500");
@@ -111,7 +112,24 @@ registerForm.addEventListener("submit", (event) => {
       passwordUser,
     };
 
-    users.push(user);
-    saveUsers(users);
+    const userRegistered = getUsers();
+    userRegistered.forEach((userData) => {
+      if (userData.emailUser == user.emailUser) {
+        warning.classList.remove("hidden");
+        warning.classList.add("block");
+        warning.textContent = "Email is already registered";
+        email.classList.remove("border-green-500");
+        email.classList.add("border-red-500");
+      } else {
+        warning.classList.add("hidden");
+        warning.classList.remove("block");
+        email.classList.remove("border-red-500");
+        email.classList.add("border-green-500");
+      }
+    });
+
+    // users.push(user);
+    // saveUsers(users);
+    // location.href = "loginPage.html";
   }
 });
