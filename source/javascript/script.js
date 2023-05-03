@@ -28,3 +28,26 @@ document.write(
 document.write(
   `<script src="${checkTitle()}source/javascript/logic/register.js"></script>`
 );
+
+window.onload = function () {
+  let navbarItems = document.querySelectorAll(".navbar-item");
+  for (let i = 0; i < navbarItems.length; i++) {
+    navbarItems[i].addEventListener("click", function (event) {
+      let targetId = this.getAttribute("href").substring(1);
+
+      let targetElement = document.getElementById(targetId);
+
+      let targetOffset = targetElement.offsetTop;
+
+      let offset = 150;
+      let scrollTo = targetOffset - offset;
+
+      window.scrollTo({
+        top: scrollTo,
+        behavior: "smooth",
+      });
+
+      event.preventDefault();
+    });
+  }
+};
