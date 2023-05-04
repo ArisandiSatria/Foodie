@@ -1,5 +1,22 @@
 const content = document.getElementById("content");
 
+const isUserLoggedIn = () => {
+  let getSession = JSON.parse(localStorage.getItem("sessionData"));
+
+  console.log(getSession);
+  if (getSession != null && getSession.isLoggedIn == true) {
+    return `<a href="page/bmi.html"><button type="submit"
+            class="border-2 border-cyan-900 text-cyan-900 rounded-sm p-2 text-md md:text-lg md:hover:scale-110 transition duration-150 active:bg-cyan-900 active:text-white">Ke
+            Kalkultor
+            BMI</button></a>`;
+  }
+
+  return `<a href="page/loginPage.html"><button type="submit"
+            class="border-2 border-cyan-900 text-cyan-900 rounded-sm p-2 text-md md:text-lg md:hover:scale-110 transition duration-150 active:bg-cyan-900 active:text-white">Ke
+            Kalkultor
+            BMI</button></a>`;
+};
+
 content.innerHTML = `<div class="container">
       <div
         class="flex md:justify-around lg:justify-between items-center flex-col-reverse md:flex-row my-12 md:my-20 w-full">
@@ -11,10 +28,7 @@ content.innerHTML = `<div class="container">
             terpercaya kami
           </h1>
           <p class="text-slate-500 mb-6 text-sm md:text-md">Ayo ukur indeks massa tubuh anda sekarang!</p>
-          <a href="page/bmi.html"><button type="submit"
-            class="border-2 border-cyan-900 text-cyan-900 rounded-sm p-2 text-md md:text-lg md:hover:scale-110 transition duration-150 active:bg-cyan-900 active:text-white">Ke
-            Kalkultor
-            BMI</button></a>
+          ${isUserLoggedIn()}
         </div>
         <div class="hero-img md:block md:w-5/12 lg:block lg:w-2/4">
           <img src="source/images/home/hero-removebg.png">
