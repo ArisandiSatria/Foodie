@@ -112,21 +112,27 @@
       <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mb-3 mt-6">
         <div class="bg-white rounded-lg p-4">
           <p class="text-gray-700 text-base">
-            BMI terakhir kamu per <span id="lastDateBmi"></span>
+            BMI terakhir kamu per <span id="lastDateBmi">-</span>
           </p>
           <p class="text-gray-700 text-base">
-            Nilai: <span id="lastBmi"></span>
+            Nilai: <span id="lastBmi">-</span>
           </p>
           <p class="text-gray-700 text-base">
-            Status: <span id="lastStatusBmi"></span>
+            Status: <span id="lastStatusBmi">-</span>
           </p>
           <br />
-          <a href="weight history.html">
-            <p class="text-cyan-900 text-sm">cek history bmi kamu!</p>
-          </a>
-          <a href="bmi.html">
-            <p class="text-cyan-900 text-sm">atau mau update bmi?</p>
-          </a>
+          <div class="flex gap-x-5">
+            <a href="weight history.html">
+              <button
+                class="text-white bg-cyan-900 hover:bg-cyan-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center">Cek
+                Riwayat Perhitungan BMI</button>
+            </a>
+            <a href="bmi.html">
+              <button
+                class="text-white bg-cyan-900 hover:bg-cyan-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center">Update
+                BMI</button>
+            </a>
+          </div>
         </div>
         <!-- <div class="bg-white rounded-lg p-4">2</div> -->
       </div>
