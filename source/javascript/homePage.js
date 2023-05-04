@@ -3,7 +3,6 @@ const content = document.getElementById("content");
 const isUserLoggedIn = () => {
   let getSession = JSON.parse(localStorage.getItem("sessionData"));
 
-  console.log(getSession);
   if (getSession != null && getSession.isLoggedIn == true) {
     return `<a href="page/bmi.html"><button type="submit"
             class="border-2 border-cyan-900 text-cyan-900 rounded-sm p-2 text-md md:text-lg md:hover:scale-110 transition duration-150 active:bg-cyan-900 active:text-white">Ke
