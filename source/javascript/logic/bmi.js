@@ -228,6 +228,7 @@ function calculate() {
     const today = date.toLocaleDateString('id-ID', options);
 
     const dataBmi = {
+      weight,
       result,
       status,
       email,
