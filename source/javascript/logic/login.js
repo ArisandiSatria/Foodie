@@ -27,8 +27,6 @@ loginForm.addEventListener("submit", (event) => {
       warning.classList.add("hidden");
       warning.classList.remove("block");
       warning.textContent = "";
-      location.href = "../page/profile.html";
-      console.log("OK");
 
       //set session
       let sessionData = {
@@ -38,6 +36,12 @@ loginForm.addEventListener("submit", (event) => {
       // Menyimpan data session pengguna ke dalam  storage
       localStorage.setItem("sessionData", JSON.stringify(sessionData));
 
+      // direct page
+      if (getDataBmi != null) {
+        location.href = "../page/profile.html";
+      } else {
+        location.href = "../page/bmi.html";
+      }
 
     } else {
       warning.classList.remove("hidden");
