@@ -1,18 +1,16 @@
 let header = document.getElementById("header");
 let footer = document.getElementById("footer");
 
-const backToIndex = () => {
-  const currentUrl = window.location.href;
-
-  return currentUrl.includes("/page") ? "../index.html" : "/index.html";
-};
+const currentUrl = window.location.href;
 
 header.innerHTML = `
 <nav class="fixed top-0 z-50 w-full bg-cyan-900 border-gray-200 ">
   <div
     class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-5"
   >
-    <a href="${backToIndex()}" class="flex items-center">
+    <a href="${
+      currentUrl.includes("/page") ? "../index.html" : "./index.html"
+    }" class="flex items-center">
       <img
         src="https://flowbite.com/docs/images/logo.svg"
         class="h-8 mr-3"
