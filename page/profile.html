@@ -158,154 +158,66 @@
           <div class="flex gap-x-5">
             <a href="weight history.html">
               <button
-                class="text-white bg-cyan-900 hover:bg-cyan-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center">Cek
-                Riwayat Perhitungan BMI</button>
+                class="text-white bg-cyan-900 hover:bg-cyan-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-xs md:text-sm w-full sm:w-auto px-1 md:px-3 py-1 md:py-1.5 text-center">
+                Cek Riwayat Perhitungan BMI
+              </button>
             </a>
-            </li>
-            <li onclick="logOut()">
-              <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-cyan-700">
-                <svg aria-hidden="true" class="flex-shrink-0 w-6 h-6 text-gray-200 transition duration-75"
-                  fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd"
-                    d="M3 3a1 1 0 00-1 1v12a1 1 0 102 0V4a1 1 0 00-1-1zm10.293 9.293a1 1 0 001.414 1.414l3-3a1 1 0 000-1.414l-3-3a1 1 0 10-1.414 1.414L14.586 9H7a1 1 0 100 2h7.586l-1.293 1.293z"
-                    clip-rule="evenodd"></path>
-                </svg>
-                <span class="flex-1 ml-3 text-gray-200 whitespace-nowrap">Sign Out</span>
-              </a>
-            </li>
-            </ul>
+            <a href="bmi.html">
+              <button
+                class="text-white bg-cyan-900 hover:bg-cyan-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-xs md:text-sm w-full sm:w-auto px-1 md:px-3 py-1 md:py-1.5 text-center">
+                Update BMI
+              </button>
+            </a>
           </div>
-          </aside>
-          <!-- content -->
-          <div class="p-4 sm:ml-64 mt-3">
-            <div class="p-4 rounded-lg mt-14">
-              <p class="text-2xl text-gray-800">
-                Selamat datang di halaman profil Foodie!
-              </p>
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mb-3 mt-6">
-                <div class="bg-white rounded-lg p-4 border-solid border-2 border-b-yellow-400">
-                  <p class="text-gray-500 text-xs">
-                    *data terbaru <span id="lastDateBmi">-</span>
-                  </p>
-                  <br />
-                  <div class="grid grid-cols-2 gap-1 mb-8">
-                    <div class="text-gray-700 text-3xl text-center">
-                      BMI : <span id="lastBmi">-</span>
-                    </div>
-                    <div class="text-gray-700 text-3xl text-center">
-                      <span id="lastStatusBmi">-</span>
-                    </div>
-                  </div>
-
-                  <div class="flex gap-x-5">
-                    <a href="weight history.html">
-                      <button
-                        class="text-white bg-cyan-900 hover:bg-cyan-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-xs md:text-sm w-full sm:w-auto px-1 md:px-3 py-1 md:py-1.5 text-center">
-                        Cek Riwayat Perhitungan BMI
-                      </button>
-                    </a>
-                    <a href="bmi.html">
-                      <button
-                        class="text-white bg-cyan-900 hover:bg-cyan-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-xs md:text-sm w-full sm:w-auto px-1 md:px-3 py-1 md:py-1.5 text-center">
-                        Update BMI
-                      </button>
-                    </a>
-                  </div>
-                </div>
-                <!-- <div class="bg-white rounded-lg p-4">2</div> -->
-              </div>
-              <!-- <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
-          <form class="w-full md:w-full p-4 bg-white rounded-lg">
+        </div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+        <form class="w-full md:w-full p-4 bg-white rounded-lg">
+          <div class="mb-6">
+            <label for="name" class="block mb-2 text-sm font-medium text-gray-900">Name</label>
+            <input type="text" id="name"
+              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+              placeholder="John doe" required />
+          </div>
+          <div class="mb-6">
+            <label for="email" class="block mb-2 text-sm font-medium text-gray-900">Email address</label>
+            <input type="email" id="email"
+              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+              placeholder="john.doe@company.com" required />
+          </div>
+          <div class="mb-6">
+            <label for="password" class="block mb-2 text-sm font-medium text-gray-900">Password</label>
+            <input type="password" id="password"
+              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+              placeholder="•••••••••" required />
             <div class="mb-6">
-              <label
-                for="name"
-                class="block mb-2 text-sm font-medium text-gray-900"
-                >Name</label
-              >
-              <input
-                type="text"
-                id="name"
+              <label for="confirm_password" class="block mb-2 text-sm font-medium text-gray-900">Confirm
+                password</label>
+              <input type="password" id="confirm_password"
                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-                placeholder="John doe"
-                required
-              />
-            </div>
-            <div class="mb-6">
-              <label
-                for="email"
-                class="block mb-2 text-sm font-medium text-gray-900"
-                >Email address</label
-              >
-              <input
-                type="email"
-                id="email"
-                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-                placeholder="john.doe@company.com"
-                required
-              />
-            </div>
-            <div class="mb-6">
-              <label
-                for="password"
-                class="block mb-2 text-sm font-medium text-gray-900"
-                >Password</label
-              >
-              <input
-                type="password"
-                id="password"
-                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-                placeholder="•••••••••"
-                required
-              />
-              <div class="mb-6">
-                <label
-                  for="confirm_password"
-                  class="block mb-2 text-sm font-medium text-gray-900"
-                  >Confirm password</label
-                >
-                <input
-                  type="password"
-                  id="confirm_password"
-                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-                  placeholder="•••••••••"
-                  required
-                />
-              </div>
-            </div>
-            <div class="flex items-start mb-6">
-              <div class="flex items-center h-5">
-                <input
-                  id="remember"
-                  type="checkbox"
-                  value=""
-                  class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300"
-                  required
-                />
-              </div>
-              <label
-                for="remember"
-                class="ml-2 text-sm font-medium text-gray-900"
-                >I agree with the
-                <a href="#" class="text-blue-600 hover:underline"
-                  >terms and conditions</a
-                >.</label
-              >
-            </div>
-            <button
-              type="submit"
-              class="text-white bg-cyan-900 hover:bg-cyan-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center"
-            >
-              Submit
-            </button>
-          </form>
-        </div> -->
+                placeholder="•••••••••" required />
             </div>
           </div>
+          <div class="flex items-start mb-6">
+            <div class="flex items-center h-5">
+              <input id="remember" type="checkbox" value=""
+                class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300" required />
+            </div>
+            <label for="remember" class="ml-2 text-sm font-medium text-gray-900">I agree with the
+              <a href="#" class="text-blue-600 hover:underline">terms and conditions</a>.</label>
+          </div>
+          <button type="submit"
+            class="text-white bg-cyan-900 hover:bg-cyan-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center">
+            Submit
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
 
-          <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
-          <script
-            src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/js/fontawesome.min.js"></script>
-          <script src="../source/javascript/script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/js/fontawesome.min.js"></script>
+  <script src="../source/javascript/script.js"></script>
 </body>
 
 </html>
