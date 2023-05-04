@@ -1,9 +1,5 @@
 
 const getDataBmi = JSON.parse(localStorage.getItem('bmi'));
-let resultBmiValue = document.getElementById("result")
-let statusBmiValue = document.getElementById("status")
-let dateValue = document.getElementById("date")
-
 let tbody = document.getElementById("tbody")
 // filter agar yang ditampilkan berdasarkan user yang login
 let filteredBmi = getDataBmi.filter(function (bmi) {
@@ -20,6 +16,10 @@ filteredBmi.forEach(function (item) {
     cellNo.classList.add("px-6", "py-4")
     cellNo.innerHTML = j++;
 
+    let cellWeight = document.createElement('td');
+    cellWeight.classList.add("px-6", "py-4")
+    cellWeight.innerHTML = item.weight + " kg";
+
     let cellResult = document.createElement('td');
     cellResult.classList.add("px-6", "py-4")
     cellResult.innerHTML = item.result;
@@ -33,6 +33,7 @@ filteredBmi.forEach(function (item) {
     cellDate.innerHTML = item.today;
 
     row.appendChild(cellNo);
+    row.appendChild(cellWeight);
     row.appendChild(cellResult);
     row.appendChild(cellStatus);
     row.appendChild(cellDate);
