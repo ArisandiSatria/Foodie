@@ -219,8 +219,13 @@ function calculate() {
 
     bmi = getBmi();
     let email = getSession.email;
-    let date = new Date();
-    let today = `${date.getDay()} ${date.getMonth()} ${date.getFullYear()}`
+    const date = new Date();
+    const options = {
+      year: 'numeric',
+      month: 'long',
+      day: '2-digit'
+    };
+    const today = date.toLocaleDateString('id-ID', options);
 
     const dataBmi = {
       result,
