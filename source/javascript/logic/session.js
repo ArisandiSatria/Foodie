@@ -5,7 +5,7 @@ let access = document.getElementById("access");
 // Menggunakan data session pengguna
 if (getSession.isLoggedIn == true) {
   // console.log(`Halo ${getSession.email}, Anda telah login`);
-  access.innerHTML = `<a href="page/Profile.html">Profile</a></button>`;
+  access.innerHTML = `<a  href="page/profile.html">Profile</a></button>`;
 } else {
   // windows.location.href = `index.html`
   console.log("ok");
