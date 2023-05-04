@@ -2,7 +2,7 @@
 let getSession = JSON.parse(localStorage.getItem("sessionData"));
 let access = document.getElementById("access");
 
-const currentUrl = window.location.href;
+// const currentUrl = window.location.href;
 
 const goToProfile = () => {
   const currentUrl = window.location.href;
