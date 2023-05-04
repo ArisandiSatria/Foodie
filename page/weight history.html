@@ -57,12 +57,14 @@
           </div>
           <div class="flex items-center">
             <div class="flex items-center ml-3">
-              <button
-                type="button"
-                class="text-yellow-400 hover:text-white border border-yellow-400 hover:bg-yellow-500 0 font-medium rounded-lg text-sm px-5 py-1.5 text-center mr-2"
-              >
-                Home
-              </button>
+              <a href="../index.html">
+                <button
+                  type="button"
+                  class="text-yellow-400 hover:text-white border border-yellow-400 hover:bg-yellow-500 0 font-medium rounded-lg text-sm px-5 py-1.5 text-center mr-2"
+                >
+                  Home
+                </button>
+              </a>
             </div>
           </div>
         </div>
@@ -85,11 +87,14 @@
             />
           </li>
           <li class="text-center" style="margin-bottom: 20px">
-            <p class="text-gray-200 font-semibold text-lg">Username</p>
+            <p
+              id="usernameProfile"
+              class="text-gray-200 font-semibold text-lg"
+            ></p>
           </li>
           <li>
             <a
-              href="#"
+              href="profile.html"
               class="flex items-center p-2 rounded-lg text-gray-100 hover:bg-cyan-700"
             >
               <svg
@@ -145,7 +150,7 @@
               >
             </a>
           </li>
-          <li>
+          <li onclick="logOut()">
             <a
               href="#"
               class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-cyan-700"
@@ -183,27 +188,25 @@
             tujuan Anda.
           </p>
 
-          <div class="relative overflow-x-auto mt-4">
-            <table
-              class="w-full md:w-1/2 text-sm text-left text-gray-500 dark:text-gray-400"
-            >
-              <thead
-                class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400"
-              >
+          <div class="relative overflow-x-auto mt-4 flex justify-center">
+            <table class="w-full md:w-3/4 text-sm text-left text-gray-500">
+              <thead class="text-xs text-gray-700 uppercase bg-gray-300">
                 <tr>
                   <th scope="col" class="px-6 py-3">No</th>
                   <th scope="col" class="px-6 py-3">BMI</th>
+                  <th scope="col" class="px-6 py-3">Status</th>
                   <th scope="col" class="px-6 py-3">Date</th>
                 </tr>
               </thead>
-              <tbody>
-                <tr
+              <tbody id="tbody">
+                <!-- <tr
                   class="bg-white border-b dark:bg-gray-800 dark:border-gray-700"
                 >
-                  <td class="px-6 py-4">1</td>
-                  <td class="px-6 py-4">30.5</td>
-                  <td class="px-6 py-4">29 April 2023</td>
-                </tr>
+                  <td id="no" class="px-6 py-4">1</td>
+                  <td id="result" class="px-6 py-4"></td>
+                  <td id="status" class="px-6 py-4"></td>
+                  <td id="date" class="px-6 py-4"></td>
+                </tr> -->
               </tbody>
             </table>
           </div>
@@ -213,7 +216,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/js/fontawesome.min.js"></script>
+    <script src="../source/javascript/script.js"></script>
     <!-- <script src="../source/javascript/loadHeaderFooter.js"></script> -->
-    <!-- <script src="source/javascript/script.js"></script> -->
   </body>
 </html>

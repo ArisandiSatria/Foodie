@@ -23,11 +23,22 @@ loginForm.addEventListener("submit", (event) => {
       isEmailCorrect(email.value, user.emailUser) &&
       isPasswordCorrect(password.value, user.passwordUser)
     ) {
+
       warning.classList.add("hidden");
       warning.classList.remove("block");
       warning.textContent = "";
-      location.href = "../index.html";
+      location.href = "../page/profile.html";
       console.log("OK");
+
+      //set session
+      let sessionData = {
+        email: email.value,
+        isLoggedIn: true
+      };
+      // Menyimpan data session pengguna ke dalam  storage
+      localStorage.setItem("sessionData", JSON.stringify(sessionData));
+
+
     } else {
       warning.classList.remove("hidden");
       warning.classList.add("block");
@@ -35,3 +46,4 @@ loginForm.addEventListener("submit", (event) => {
     }
   });
 });
+

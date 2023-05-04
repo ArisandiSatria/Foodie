@@ -204,6 +204,33 @@ function calculate() {
 
     faqWarp.classList.add("display-none");
     recommend.classList.remove("display-none");
+
+    //////////////////////// save bmi
+    let bmi = [];
+
+    const saveBmi = (bmi) => {
+      localStorage.setItem("bmi", JSON.stringify(bmi));
+    };
+    const getBmi = () => {
+      const bmiJSON = localStorage.getItem("bmi");
+      return bmiJSON ? JSON.parse(bmiJSON) : [];
+    };
+
+
+    bmi = getBmi();
+    let email = getSession.email;
+    let date = new Date();
+    let today = `${date.getDay()} ${date.getMonth()} ${date.getFullYear()}`
+
+    const dataBmi = {
+      result,
+      status,
+      email,
+      today
+    };
+
+    bmi.push(dataBmi);
+    saveBmi(bmi);
   }
 }
 
@@ -235,3 +262,4 @@ for (i = 0; i < faq.length; i++) {
     }
   });
 }
+

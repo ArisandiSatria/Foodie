@@ -122,7 +122,7 @@ input[type="text"]:focus {
   background-color: #14b8a6;
   text-align: center;
   color: #f5f5f5;
-  padding-top: 5px;
+  /* padding-top: 5px; */
   margin-right: 10px;
 }
 
@@ -157,11 +157,6 @@ input[type="text"]:focus {
 .box-output {
   height: 160px;
   text-align: center;
-}
-
-.one {
-  width: 20%;
-  /* padding-top: 10px; */
 }
 
 .box-output > img {
@@ -252,7 +247,7 @@ input[type="text"]:focus {
 
 #qna {
   position: relative;
-  top: -225px;
+  top: -200px;
   height: auto;
   overflow: auto;
   border-radius: 15px;
@@ -261,7 +256,7 @@ input[type="text"]:focus {
 
   padding-top: 257px;
   padding-bottom: 30px;
-  margin-bottom: -180px;
+  margin-bottom: -80px;
 }
 
 .qna-wrap {

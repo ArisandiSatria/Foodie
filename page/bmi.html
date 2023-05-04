@@ -2,107 +2,135 @@
 
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../source/css/bmi.css" />
+    <title>BMI</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="../source/css/bmi.css" />
-  <title>BMI</title>
-</head>
+  <body class="bg-gray-100">
+    <div id="header"></div>
+    <div class="container mx-auto px-3 mt-24 2xl:px-32 xl:px-16 md:px-8">
+      <!-- Content -->
+      <div id="title">
+        <p class="text-gray-900 text-2xl mb-5 mt-5">
+          Berapa Sih Berat Badan Ideal Kamu?
+        </p>
+        <p class="text-base text-gray-700">
+          Body Mass Index (BMI) adalah angka yang didapat berdasarkan tinggi dan
+          berat badan kamu yang menjadi standar penilaian untuk melihat apakah
+          berat badan kamu kurang, normal atau ideal, berlebih, atau bahkan
+          obesitas.
+          <span id="title-span" class="">
+            Untuk mengetahui angka BMI kamu, dibutuhkan beberapa informasi
+            mendasar:</span
+          >
+        </p>
+      </div>
 
-<body class="bg-gray-100">
-  <div id="header"></div>
-  <div class="container mx-auto px-3 mt-24 2xl:px-32 xl:px-16 md:px-8">
-    <!-- Content -->
-    <div id="title">
-      <p class="text-gray-900 text-2xl mb-5 mt-5">
-        Berapa Sih Berat Badan Ideal Kamu?
-      </p>
-      <p class="text-base text-gray-700">
-        Body Mass Index (BMI) adalah angka yang didapat berdasarkan tinggi dan
-        berat badan kamu yang menjadi standar penilaian untuk melihat apakah
-        berat badan kamu kurang, normal atau ideal, berlebih, atau bahkan
-        obesitas.
-        <span id="title-span" class="">
-          Untuk mengetahui angka BMI kamu, dibutuhkan beberapa informasi
-          mendasar:</span>
-      </p>
-    </div>
-
-    <div id="input-bmi" class="">
-      <form id="form-bmi">
-        <div class="flex flex-wrap flex-col lg:flex-row place-content-around">
-          <div class="box">
-            <div class="circle">
-              <p>1</p>
+      <div id="input-bmi" class="">
+        <form id="form-bmi">
+          <div class="flex flex-wrap flex-col lg:flex-row place-content-around">
+            <div class="box">
+              <div class="circle">
+                <p>1</p>
+              </div>
+              <p class="text-gray-800">Kamu adalah?</p>
+              <div class="img-box">
+                <input
+                  type="radio"
+                  name="gender"
+                  id="male"
+                  value="male"
+                  class="input-hidden"
+                />
+                <label for="male">
+                  <img src="../source/images/bmi/male.png" />
+                </label>
+                <input
+                  type="radio"
+                  name="gender"
+                  id="female"
+                  value="female"
+                  class="input-hidden"
+                />
+                <label for="female">
+                  <img src="../source/images/bmi/female.png" />
+                </label>
+              </div>
+              <span class="error text-xs"></span>
             </div>
-            <p class="text-gray-800">Kamu adalah?</p>
-            <div class="img-box">
-              <input type="radio" name="gender" id="male" value="male" class="input-hidden" />
-              <label for="male">
-                <img src="../source/images/bmi/male.png" />
-              </label>
-              <input type="radio" name="gender" id="female" value="female" class="input-hidden" />
-              <label for="female">
-                <img src="../source/images/bmi/female.png" />
-              </label>
+            <div class="box">
+              <div class="circle">
+                <p>2</p>
+              </div>
+              <p class="text-gray-800">Berapa tinggi badanmu?</p>
+              <div class="input-container">
+                <input
+                  type="text"
+                  id="heightBody"
+                  class="text-lg"
+                  placeholder="170"
+                  onkeypress="return  /^\d{0,3}$/.test(this.value+String.fromCharCode(event.keyCode));"
+                />
+                <span class="text-lg text-gray-500">cm</span>
+              </div>
+              <span class="error text-xs"></span>
             </div>
-            <span class="error text-xs"></span>
+            <div class="box">
+              <div class="circle">
+                <p>3</p>
+              </div>
+              <p class="text-gray-800">Berapa berat badanmu?</p>
+              <div class="input-container">
+                <input
+                  type="text"
+                  id="weightBody"
+                  class="text-lg"
+                  placeholder="70"
+                  onkeypress="return  /^\d{0,3}$/.test(this.value+String.fromCharCode(event.keyCode));"
+                />
+                <span class="unit text-lg text-gray-500">kg</span>
+              </div>
+              <span class="error text-xs"></span>
+            </div>
           </div>
-          <div class="box">
-            <div class="circle">
-              <p>2</p>
-            </div>
-            <p class="text-gray-800">Berapa tinggi badanmu?</p>
-            <div class="input-container">
-              <input type="text" id="heightBody" class="text-lg" placeholder="170"
-                onkeypress="return  /^\d{0,3}$/.test(this.value+String.fromCharCode(event.keyCode));" />
-              <span class="text-lg text-gray-500">cm</span>
-            </div>
-            <span class="error text-xs"></span>
-          </div>
-          <div class="box">
-            <div class="circle">
-              <p>3</p>
-            </div>
-            <p class="text-gray-800">Berapa berat badanmu?</p>
-            <div class="input-container">
-              <input type="text" id="weightBody" class="text-lg" placeholder="70"
-                onkeypress="return  /^\d{0,3}$/.test(this.value+String.fromCharCode(event.keyCode));" />
-              <span class="unit text-lg text-gray-500">kg</span>
-            </div>
-            <span class="error text-xs"></span>
-          </div>
-        </div>
-        <div class="calculate">
-          <div class="btn-calculate" style="
+          <div class="calculate">
+            <div
+              class="btn-calculate"
+              style="
                 display: flex;
                 align-items: center;
                 justify-content: center;
-              " onclick="calculate()">
-            <span>Hitung</span>
-            <i class="fas fa-long-arrow-alt-right" style="margin-left: 10px; font-size: 25px"></i>
+              "
+              onclick="calculate()"
+            >
+              <span>Hitung</span>
+              <i
+                class="fas fa-long-arrow-alt-right"
+                style="margin-left: 10px; font-size: 25px"
+              ></i>
+            </div>
           </div>
-        </div>
-      </form>
-    </div>
-    <div id="output-bmi" class="display-none">
-      <div class="wrap">
-        <div id="img" class="box-output one"></div>
-        <div class="box-output two">
-          <div class="title-output">
-            <div id="info-bmi" class="text-3xl info-bmi text-800"></div>
-            <div id="result-value" class="text-3xl value-bmi text-800"></div>
+        </form>
+      </div>
+      <div id="output-bmi" class="display-none">
+        <div class="wrap">
+          <div id="img" class="box-output one"></div>
+          <div class="box-output two">
+            <div class="title-output">
+              <div id="info-bmi" class="text-3xl info-bmi text-800"></div>
+              <div id="result-value" class="text-3xl value-bmi text-800"></div>
+            </div>
+            <p id="text-bmi" class="text-sm text-600"></p>
           </div>
-          <p id="text-bmi" class="text-sm text-600"></p>
-        </div>
-        <div class="box-output three">
-          <div class="info-weight">
-            <div class="info-weight-body text-700">Kurus</div>
-            <div class="info-weight-number text-700">
-              < 18.5</div>
+          <div class="box-output three">
+            <div class="info-weight">
+              <div class="info-weight-body text-700">Kurus</div>
+              <div class="info-weight-number text-700">< 18.5</div>
             </div>
             <div class="info-weight">
               <div class="info-weight-body text-700">Normal</div>
@@ -119,14 +147,25 @@
           </div>
         </div>
         <div class="calculate">
-          <a href="https://dietku.netlify.app#register" target="_blank" rel="noopener noreferrer" decoration="none"
-            style="text-decoration: none">
-            <div class="btn-calculate">Konsultasi</div>
+          <a
+            href="weight history.html"
+            target="_blank"
+            rel="noopener noreferrer"
+            decoration="none"
+            style="text-decoration: none"
+          >
+            <div class="btn-calculate">History BMI</div>
           </a>
-          <div class="btn-calculate" style="display: flex; align-items: center; justify-content: center"
-            onclick="back()">
+          <div
+            class="btn-calculate"
+            style="display: flex; align-items: center; justify-content: center"
+            onclick="back()"
+          >
             <span>Cek ulang</span>
-            <i class="fas fa-redo-alt" style="margin-left: 7px; font-size: 13px"></i>
+            <i
+              class="fas fa-redo-alt"
+              style="margin-left: 7px; font-size: 13px"
+            ></i>
           </div>
         </div>
       </div>
@@ -295,7 +334,10 @@
             </div>
           </div>
 
-          <div id="recommend" class="display-none pl-2 w-full md:w-1/2 md:pl-16">
+          <div
+            id="recommend"
+            class="display-none pl-2 w-full md:w-1/2 md:pl-16"
+          >
             <p class="text-lg text-gray-100">Rekomendasi</p>
             <ul id="recommend-underweight" class="display-none">
               <li class="text-gray-300">
@@ -346,6 +388,5 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
     <script src="../source/javascript/script.js"></script>
-</body>
-
+  </body>
 </html>

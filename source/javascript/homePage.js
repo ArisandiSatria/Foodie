@@ -1,5 +1,6 @@
 const content = document.getElementById("content");
 
+
 content.innerHTML = `<div class="container">
       <div
         class="flex md:justify-around lg:justify-between items-center flex-col-reverse md:flex-row my-12 md:my-20 w-full">

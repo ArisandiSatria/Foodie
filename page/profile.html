@@ -13,7 +13,7 @@
     />
     <title>Profile</title>
   </head>
-  <body class="bg-gray-200 dark:bg-gray-900">
+  <body class="bg-gray-200">
     <!-- navbar -->
     <nav
       class="fixed top-0 z-50 w-full bg-cyan-900 border-b border-cyan-900 md:px-9 px-2 md:py-1.5"
@@ -57,12 +57,14 @@
           </div>
           <div class="flex items-center">
             <div class="flex items-center ml-3">
-              <button
-                type="button"
-                class="text-yellow-400 hover:text-white border border-yellow-400 hover:bg-yellow-500 0 font-medium rounded-lg text-sm px-5 py-1.5 text-center mr-2"
-              >
-                Home
-              </button>
+              <a href="../index.html">
+                <button
+                  type="button"
+                  class="text-yellow-400 hover:text-white border border-yellow-400 hover:bg-yellow-500 0 font-medium rounded-lg text-sm px-5 py-1.5 text-center mr-2"
+                >
+                  Home
+                </button>
+              </a>
             </div>
           </div>
         </div>
@@ -85,7 +87,10 @@
             />
           </li>
           <li class="text-center" style="margin-bottom: 20px">
-            <p class="text-gray-200 font-semibold text-lg">Username</p>
+            <p
+              id="usernameProfile"
+              class="text-gray-200 font-semibold text-lg"
+            ></p>
           </li>
           <li>
             <a
@@ -94,7 +99,7 @@
             >
               <svg
                 aria-hidden="true"
-                class="flex-shrink-0 w-6 h-6 text-gray-200 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+                class="flex-shrink-0 w-6 h-6 text-gray-200 transition duration-75"
                 fill="currentColor"
                 viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg"
@@ -112,7 +117,7 @@
           </li>
           <li>
             <a
-              href="#"
+              href="weight history.html"
               class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-cyan-700"
             >
               <i class="fas fa-history text-lg text-gray-200 ml-1"></i>
@@ -129,7 +134,7 @@
             >
               <svg
                 aria-hidden="true"
-                class="flex-shrink-0 w-6 h-6 text-gray-200 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+                class="flex-shrink-0 w-6 h-6 text-gray-200 transition duration-75"
                 fill="currentColor"
                 viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg"
@@ -145,7 +150,7 @@
               >
             </a>
           </li>
-          <li>
+          <li onclick="logOut()">
             <a
               href="#"
               class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-cyan-700"
@@ -174,24 +179,42 @@
     <!-- content -->
     <div class="p-4 sm:ml-64 mt-3">
       <div class="p-4 rounded-lg mt-14">
-        <div class="grid grid-cols-1 bg-white dark:bg-gray-800 rounded p-4">
-          <p class="text-base text-gray-800 dark:text-gray-200">
-            Selamat datang di halaman profil Foodie! Di sini, Anda dapat
-            mengedit informasi akun Anda, termasuk username dan password, agar
-            sesuai dengan preferensi Anda.
-          </p>
-
-          <form class="w-full md:w-1/2 mt-5 px-4">
+        <p class="text-2xl text-gray-800">
+          Selamat datang di halaman profil Foodie!
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mb-3 mt-6">
+          <div class="bg-white rounded-lg p-4">
+            <p class="text-gray-700 text-base">
+              BMI terakhir kamu per <span id="lastDateBmi"></span>
+            </p>
+            <p class="text-gray-700 text-base">
+              Nilai: <span id="lastBmi"></span>
+            </p>
+            <p class="text-gray-700 text-base">
+              Status: <span id="lastStatusBmi"></span>
+            </p>
+            <br />
+            <a href="weight history.html"
+              ><p class="text-cyan-900 text-sm">cek history bmi kamu!</p></a
+            >
+            <a href="bmi.html"
+              ><p class="text-cyan-900 text-sm">atau mau update bmi?</p></a
+            >
+          </div>
+          <!-- <div class="bg-white rounded-lg p-4">2</div> -->
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+          <form class="w-full md:w-full p-4 bg-white rounded-lg">
             <div class="mb-6">
               <label
                 for="name"
-                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                class="block mb-2 text-sm font-medium text-gray-900"
                 >Name</label
               >
               <input
                 type="text"
                 id="name"
-                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
                 placeholder="John doe"
                 required
               />
@@ -199,13 +222,13 @@
             <div class="mb-6">
               <label
                 for="email"
-                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                class="block mb-2 text-sm font-medium text-gray-900"
                 >Email address</label
               >
               <input
                 type="email"
                 id="email"
-                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
                 placeholder="john.doe@company.com"
                 required
               />
@@ -213,30 +236,30 @@
             <div class="mb-6">
               <label
                 for="password"
-                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                class="block mb-2 text-sm font-medium text-gray-900"
                 >Password</label
               >
               <input
                 type="password"
                 id="password"
-                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
                 placeholder="•••••••••"
                 required
               />
-            </div>
-            <div class="mb-6">
-              <label
-                for="confirm_password"
-                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                >Confirm password</label
-              >
-              <input
-                type="password"
-                id="confirm_password"
-                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                placeholder="•••••••••"
-                required
-              />
+              <div class="mb-6">
+                <label
+                  for="confirm_password"
+                  class="block mb-2 text-sm font-medium text-gray-900"
+                  >Confirm password</label
+                >
+                <input
+                  type="password"
+                  id="confirm_password"
+                  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                  placeholder="•••••••••"
+                  required
+                />
+              </div>
             </div>
             <div class="flex items-start mb-6">
               <div class="flex items-center h-5">
@@ -244,24 +267,22 @@
                   id="remember"
                   type="checkbox"
                   value=""
-                  class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800"
+                  class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300"
                   required
                 />
               </div>
               <label
                 for="remember"
-                class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                class="ml-2 text-sm font-medium text-gray-900"
                 >I agree with the
-                <a
-                  href="#"
-                  class="text-blue-600 hover:underline dark:text-blue-500"
+                <a href="#" class="text-blue-600 hover:underline"
                   >terms and conditions</a
                 >.</label
               >
             </div>
             <button
               type="submit"
-              class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+              class="text-white bg-cyan-900 hover:bg-cyan-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center"
             >
               Submit
             </button>

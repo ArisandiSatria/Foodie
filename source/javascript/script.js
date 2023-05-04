@@ -8,7 +8,8 @@ function checkTitle() {
   }
 }
 
-console.log(checkTitle());
+// console.log(checkTitle());
+
 // Memanggil file homepage.js
 document.write(
   `<script src="${checkTitle()}source/javascript/homePage.js"></script>`
@@ -28,6 +29,21 @@ document.write(
 document.write(
   `<script src="${checkTitle()}source/javascript/logic/register.js"></script>`
 );
+// memanggil file register.js
+document.write(
+  `<script src="${checkTitle()}source/javascript/logic/session.js"></script>`
+);
+
+document.write(
+  `<script src="${checkTitle()}source/javascript/logic/logout.js"></script>`
+);
+document.write(
+  `<script src="${checkTitle()}source/javascript/logic/weightHistory.js"></script>`
+);
+document.write(
+  `<script src="${checkTitle()}source/javascript/logic/profile.js"></script>`
+);
+
 
 window.onload = function () {
   let navbarItems = document.querySelectorAll(".navbar-item");
