@@ -49,7 +49,7 @@ header.innerHTML = `
       >
         <li>
           <a
-            href="#home"
+            href="${currentUrl.includes("/page") ? "../index.html" : ""}#home"
             class="navbar-item block py-2 pl-3 pr-4 text-gray-100 hover:underline underline-offset-4 rounded md:bg-transparent md:p-0 "
             aria-current="page"
             >Home</a
@@ -57,21 +57,27 @@ header.innerHTML = `
         </li>
         <li>
           <a
-            href="#benefit"
+            href="${
+              currentUrl.includes("/page") ? "../index.html" : ""
+            }#benefit"
             class="navbar-item block py-2 pl-3 pr-4 text-gray-100 hover:underline underline-offset-4 rounded md:bg-transparent md:p-0 "
             >Benefit</a
           >
         </li>
         <li>
           <a
-            href="#package"
+            href="${
+              currentUrl.includes("/page") ? "../index.html" : ""
+            }#package"
             class="navbar-item block py-2 pl-3 pr-4 text-gray-100 hover:underline underline-offset-4 rounded md:bg-transparent md:p-0 "
             >Package</a
           >
         </li>
         <li>
           <a
-            href="#testimony"
+            href="${
+              currentUrl.includes("/page") ? "../index.html" : ""
+            }#testimony"
             class="navbar-item block py-2 pl-3 pr-4 text-gray-100 hover:underline underline-offset-4 rounded md:bg-transparent md:p-0 "
             >Testimony</a
           >
