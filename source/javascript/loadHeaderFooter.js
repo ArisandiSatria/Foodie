@@ -1,12 +1,28 @@
 let header = document.getElementById("header");
 let footer = document.getElementById("footer");
 
+const backToIndex = () => {
+  const currentUrl = window.location.href;
+
+  if (currentUrl.includes("/page")) {
+    const newUrl = currentUrl.split("/");
+
+    const index = newUrl.indexOf("page");
+    if (index !== -1) {
+      newUrl.splice(index, newUrl.length - index);
+    }
+    return newUrl.join("/") + "/index.html";
+  } else {
+    return "/index.html";
+  }
+};
+
 header.innerHTML = `
 <nav class="fixed top-0 z-50 w-full bg-cyan-900 border-gray-200 ">
   <div
     class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-5"
   >
-    <a href="https://flowbite.com/" class="flex items-center">
+    <a href="${backToIndex()}" class="flex items-center">
       <img
         src="https://flowbite.com/docs/images/logo.svg"
         class="h-8 mr-3"
