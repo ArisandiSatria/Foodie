@@ -2,9 +2,7 @@
 let getSession = JSON.parse(localStorage.getItem("sessionData"));
 let access = document.getElementById("access");
 
-console.log(access);
-
-const currentUrl = window.location.href;
+// const currentUrl = window.location.href;
 
 // Menggunakan data session pengguna
 if (getSession.isLoggedIn == true) {
