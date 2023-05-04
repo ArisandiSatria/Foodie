@@ -4,17 +4,7 @@ let footer = document.getElementById("footer");
 const backToIndex = () => {
   const currentUrl = window.location.href;
 
-  if (currentUrl.includes("/page")) {
-    const newUrl = currentUrl.split("/");
-
-    const index = newUrl.indexOf("page");
-    if (index !== -1) {
-      newUrl.splice(index, newUrl.length - index);
-    }
-    return newUrl.join("/") + "/index.html";
-  } else {
-    return "/index.html";
-  }
+  return currentUrl.includes("/page") ? "../index.html" : "/index.html";
 };
 
 header.innerHTML = `
