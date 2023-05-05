@@ -177,26 +177,16 @@
             </div>
           </div>
         </div>
-        <div class="calculate">
+        <div class="mt-20 flex flex-row justify-center">
           <a
             href="weight history.html"
             target="_blank"
             rel="noopener noreferrer"
             decoration="none"
-            style="
-              text-decoration: none;
-              display: flex;
-              align-items: center;
-              justify-content: center;
-            "
           >
-            <div class="btn-calculate">History BMI</div>
+            <div class="btn-calculate">Riwayat BMI</div>
           </a>
-          <div
-            class="btn-calculate"
-            style="display: flex; align-items: center; justify-content: center"
-            onclick="back()"
-          >
+          <div class="btn-calculate" onclick="back()">
             <span>Cek ulang</span>
             <i
               class="fas fa-redo-alt"
@@ -370,47 +360,53 @@
             </div>
           </div>
 
-          <div
-            id="recommend"
-            class="display-none pl-2 w-full md:w-1/2 md:pl-16"
-          >
-            <p class="text-lg text-gray-100">Rekomendasi</p>
-            <ul id="recommend-underweight" class="display-none">
-              <li class="text-gray-300">
+          <div id="recommend" class="hidden px-4 w-full md:w-1/2 md:pl-16">
+            <p class="text-xl text-gray-100 mb-4">Rekomendasi</p>
+            <ul
+              id="recommend-underweight"
+              class="hidden list-outside list-disc pl-2"
+            >
+              <li class="text-gray-300 text-sm md:text-base">
                 Konsumsi makanan sehat dengan frekuensi lebih sering untuk
                 menaikkan berat badan.
               </li>
-              <li class="text-gray-300">
+              <li class="text-gray-300 text-sm md:text-base">
                 Hindari konsumsi obat penambah berat badan instan.
               </li>
-              <li class="text-gray-300">
+              <li class="text-gray-300 text-sm md:text-base">
                 Bentuk tubuh dengan olahraga angkat beban atau fleksibilitas.
               </li>
             </ul>
-            <ul id="recommend-normal" class="display-none">
-              <li class="text-gray-300">
+            <ul
+              id="recommend-normal"
+              class="hidden list-outside list-disc pl-2"
+            >
+              <li class="text-gray-300 text-sm md:text-base">
                 Tetap konsumsi makanan sehat dan bergizi seimbang.
               </li>
-              <li class="text-gray-300">
+              <li class="text-gray-300 text-sm md:text-base">
                 Tetap aktif bergerak 30 menit per hari.
               </li>
             </ul>
-            <ul id="recommend-overweight" class="display-none">
-              <li class="text-gray-300">
+            <ul
+              id="recommend-overweight"
+              class="hidden list-outside list-disc pl-2"
+            >
+              <li class="text-gray-300 text-sm md:text-base">
                 Atur pola makan dengan membatasi konsumsi makanan tinggi kalori,
                 pemanis buatan, dan gula.
               </li>
-              <li class="text-gray-300">
+              <li class="text-gray-300 text-sm md:text-base">
                 Tetap aktif bergerak 30 menit per hari.
               </li>
-              <li class="text-gray-300">
+              <li class="text-gray-300 text-sm md:text-base">
                 Penurunan berat badan yang direkomendasikan adalah 0.5-1 kg
                 setiap pekan.
               </li>
-              <li class="text-gray-300">
+              <li class="text-gray-300 text-sm md:text-base">
                 Hindari konsumsi penurun berat badan instan.
               </li>
-              <li class="text-gray-300">
+              <li class="text-gray-300 text-sm md:text-base">
                 Lakukan olahraga 3-4 kali per minggu selama 30 menit, misalnya
                 bersepeda atau berjalan kaki.
               </li>
