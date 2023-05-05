@@ -153,41 +153,41 @@ function recommendText(status) {
   const overweight = document.getElementById("recommend-overweight");
 
   if (status === "Kurus") {
-    underweight.classList.remove("display-none");
+    underweight.classList.remove("hidden");
   } else if (status === "Normal") {
-    normal.classList.remove("display-none");
+    normal.classList.remove("hidden");
   } else {
-    overweight.classList.remove("display-none");
+    overweight.classList.remove("hidden");
   }
 }
 function img(status, gender) {
   const imgStatus = document.getElementById("img");
 
   if (status === "Kurus" && gender === "female") {
-    imgStatus.innerHTML = `<img src="../source/images/bmi/thin f.png"  />`;
+    imgStatus.innerHTML = `<img class="h-36" src="../source/images/bmi/thin f.png"  />`;
   } else if (status === "Normal" && gender === "female") {
-    imgStatus.innerHTML = `<img src="../source/images/bmi/normal f.png"  />`;
+    imgStatus.innerHTML = `<img class="h-36" src="../source/images/bmi/normal f.png"  />`;
   } else if (status === "Gemuk" && gender === "female") {
-    imgStatus.innerHTML = `<img src="../source/images/bmi/obesity f.png"  />`;
+    imgStatus.innerHTML = `<img class="h-36" src="../source/images/bmi/obesity f.png"  />`;
   } else if (status === "Obesitas" && gender === "female") {
-    imgStatus.innerHTML = `<img src="../source/images/bmi/obesity f.png"  />`;
+    imgStatus.innerHTML = `<img class="h-36" src="../source/images/bmi/obesity f.png"  />`;
   } else if (status === "Kurus" && gender === "male") {
-    imgStatus.innerHTML = `<img src="../source/images/bmi/thin m.png"  />`;
+    imgStatus.innerHTML = `<img class="h-36" src="../source/images/bmi/thin m.png"  />`;
   } else if (status === "Normal" && gender === "male") {
-    imgStatus.innerHTML = `<img src="../source/images/bmi/normal m.png"  />`;
+    imgStatus.innerHTML = `<img class="h-36" src="../source/images/bmi/normal m.png"  />`;
   } else if (status === "Gemuk" && gender === "male") {
-    imgStatus.innerHTML = `<img src="../source/images/bmi/obesity m.png"  />`;
+    imgStatus.innerHTML = `<img class="h-36" src="../source/images/bmi/obesity m.png"  />`;
   } else if (status === "Obesitas" && gender === "male") {
-    imgStatus.innerHTML = `<img src="../source/images/bmi/obesity m.png"  />`;
+    imgStatus.innerHTML = `<img class="h-36" src="../source/images/bmi/obesity m.png"  />`;
   }
 }
 
 //calculate
 function calculate() {
   if (validate() == true) {
-    formInputBmi.classList.add("display-none");
-    formOutputBmi.classList.remove("display-none");
-    titleSpan.classList.add("display-none");
+    formInputBmi.classList.add("hidden");
+    formOutputBmi.classList.remove("hidden");
+    titleSpan.classList.add("hidden");
 
     const height = heightBody.value;
     const weight = weightBody.value;
@@ -202,8 +202,8 @@ function calculate() {
     resultValue.innerText = result;
     statusValue.innerText = status;
 
-    faqWarp.classList.add("display-none");
-    recommend.classList.remove("display-none");
+    faqWarp.classList.add("hidden");
+    recommend.classList.remove("hidden");
 
     //////////////////////// save bmi
     let bmi = [];
@@ -241,12 +241,12 @@ function calculate() {
 }
 
 function back() {
-  formInputBmi.classList.remove("display-none");
-  formOutputBmi.classList.add("display-none");
-  titleSpan.classList.remove("display-none");
+  formInputBmi.classList.remove("hidden");
+  formOutputBmi.classList.add("hidden");
+  titleSpan.classList.remove("hidden");
 
-  faqWarp.classList.remove("display-none");
-  recommend.classList.add("display-none");
+  faqWarp.classList.remove("hidden");
+  recommend.classList.add("hidden");
 
   location.reload();
   formBmi.reset();
