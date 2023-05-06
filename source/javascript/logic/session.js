@@ -2,13 +2,16 @@
 let getSession = JSON.parse(localStorage.getItem("sessionData"));
 let access = document.getElementById("access");
 
-
 // Menggunakan data session pengguna
 if (getSession == null) {
-  if (currentUrl.includes("index") == false || currentUrl.includes("loginPage") == false) {
-    window.location.href = "../index.html"
+  if (
+    currentUrl.includes("index") ||
+    currentUrl.includes("onboarding-page.html")
+  ) {
+    null;
+  } else {
+    window.location.href = "../index.html";
   }
-
 } else {
   access.innerHTML = `<a href="${currentUrl.includes("/page")
     ? "../page/profile.html"

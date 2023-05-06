@@ -130,6 +130,6 @@ registerForm.addEventListener("submit", (event) => {
 
     users.push(user);
     saveUsers(users);
-    location.href = "loginPage.html";
+    location.href = "onboarding-page.html";
   }
 });
