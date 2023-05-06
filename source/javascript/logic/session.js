@@ -5,7 +5,7 @@ let access = document.getElementById("access");
 
 // Menggunakan data session pengguna
 if (getSession == null) {
-  if (currentUrl.includes("/index") || currentUrl.includes("/loginPage")) {
+  if (currentUrl.includes("index") || currentUrl.includes("loginPage")) {
     null
   } else {
     window.location.href = "../index.html"
