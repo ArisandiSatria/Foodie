@@ -10,11 +10,7 @@ header.innerHTML = `
   >
     <a href="${currentUrl.includes("/page") ? "../index.html" : "./index.html"
   }" class="flex items-center">
-      <img
-        src="https://flowbite.com/docs/images/logo.svg"
-        class="h-8 mr-3"
-        alt="Flowbite Logo"
-      />
+    <img src="https://i.ibb.co/dmF5XT1/logo-foodie.png" alt="logo-foodie" border="0" class="h-10">
       <span
         class="self-center text-2xl font-semibold whitespace-nowrap text-gray-100"
         >Foodie</span
