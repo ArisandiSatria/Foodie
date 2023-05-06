@@ -13,11 +13,10 @@ if (getSession == null) {
     window.location.href = "../index.html";
   }
 } else {
-  access.innerHTML = `<a href="${
-    currentUrl.includes("/page")
-      ? "../page/profile.html"
-      : "./page/profile.html"
-  }"><button type="button" class="text-white font-semibold bg-yellow-500 hover:bg-yellow-400 0 rounded-lg text-sm px-5 py-1.5 text-center mr-2">
+  access.innerHTML = `<a href="${currentUrl.includes("/page")
+    ? "../page/profile.html"
+    : "./page/profile.html"
+    }"><button type="button" class="text-white font-semibold bg-yellow-500 hover:bg-yellow-400 0 rounded-lg text-sm px-5 py-1.5 text-center mr-2">
                     Profile
                   </button></a>`;
 }
