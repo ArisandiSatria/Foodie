@@ -8,8 +8,9 @@ header.innerHTML = `
   <div
     class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-5"
   >
-    <a href="${currentUrl.includes("/page") ? "../index.html" : "./index.html"
-  }" class="flex items-center">
+    <a href="${
+      currentUrl.includes("/page") ? "../index.html" : "./index.html"
+    }" class="flex items-center">
     <img src="https://i.ibb.co/dmF5XT1/logo-foodie.png" alt="logo-foodie" border="0" class="h-10">
       <span
         class="self-center text-2xl font-semibold whitespace-nowrap text-gray-100"
@@ -52,35 +53,35 @@ header.innerHTML = `
         </li>
         <li>
           <a
-            href="${currentUrl.includes("/page") ? "../index.html" : ""
-  }#benefit"
+            href="${
+              currentUrl.includes("/page") ? "../index.html" : ""
+            }#benefit"
             class="navbar-item block py-2 pl-3 pr-4 text-gray-100 hover:underline underline-offset-4 rounded md:bg-transparent md:p-0 "
             >Benefit</a
           >
         </li>
         <li>
           <a
-            href="${currentUrl.includes("/page") ? "../index.html" : ""
-  }#package"
+            href="${
+              currentUrl.includes("/page") ? "../index.html" : ""
+            }#package"
             class="navbar-item block py-2 pl-3 pr-4 text-gray-100 hover:underline underline-offset-4 rounded md:bg-transparent md:p-0 "
             >Package</a
           >
         </li>
         <li>
           <a
-            href="${currentUrl.includes("/page") ? "../index.html" : ""
-  }#testimony"
+            href="${
+              currentUrl.includes("/page") ? "../index.html" : ""
+            }#testimony"
             class="navbar-item block py-2 pl-3 pr-4 text-gray-100 hover:underline underline-offset-4 rounded md:bg-transparent md:p-0 "
             >Testimony</a
           >
         </li>
         
         <li>
-        <div id="access">
-          <a href="page/loginPage.html"><button type="button" class="text-white font-semibold bg-yellow-500 hover:bg-yellow-400 0 rounded-lg text-sm px-5 py-1.5 text-center mr-2">
-            Login
-          </button></a>
-        </div>
+        <button id="access" type="button" class="text-white font-medium bg-gradient-to-br from-amber-600 to-yellow-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-1 text-center my-0">
+        <a  href="page/onboarding-page.html">Login</a></button>
         </li>
         </ul>
     </div>
@@ -91,8 +92,9 @@ footer.innerHTML = `<footer class="bg-cyan-900 relative bottom-0 w-full">
   <div class="mx-auto w-full max-w-screen-xl text-center p-5 py-6 lg:py-8">
     <span class="text-sm text-gray-300x text-white"
       >© 2023
-      <a href="${currentUrl.includes("/page") ? "../index.html" : "./index.html"
-  }" class="hover:underline">Foodie</a>. All
+      <a href="${
+        currentUrl.includes("/page") ? "../index.html" : "./index.html"
+      }" class="hover:underline">Foodie</a>. All
       Rights Reserved.
     </span>
   </div>

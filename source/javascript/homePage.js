@@ -10,7 +10,7 @@ const isUserLoggedIn = () => {
             BMI</button></a>`;
   }
 
-  return `<a href="page/loginPage.html"><button type="submit"
+  return `<a href="page/onboarding-page.html"><button type="submit"
             class="border-2 border-cyan-900 text-cyan-900 rounded-sm p-2 text-md md:text-lg md:hover:scale-110 transition duration-150 active:bg-cyan-900 active:text-white">Ke
             Kalkultor
             BMI</button></a>`;
