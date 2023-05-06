@@ -1,12 +1,21 @@
 // Mendapatkan data session pengguna dari session storage
 let getSession = JSON.parse(localStorage.getItem("sessionData"));
 let access = document.getElementById("access");
-// console.log(getSession.isLoggedIn);
+
+
 // Menggunakan data session pengguna
-if (getSession.isLoggedIn == true) {
-  // console.log(`Halo ${getSession.email}, Anda telah login`);
-  access.innerHTML = `<a  href="page/profile.html">Profile</a></button>`;
+if (getSession == null) {
+  if (currentUrl.includes("index") || currentUrl.includes("loginPage")) {
+    null
+  } else {
+    window.location.href = "../index.html"
+  }
+
 } else {
-  // windows.location.href = `index.html`
-  console.log("ok");
+  access.innerHTML = `<a href="${currentUrl.includes("/page")
+    ? "../page/profile.html"
+    : "./page/profile.html"
+    }"><button type="button" class="text-white font-semibold bg-yellow-500 hover:bg-yellow-400 0 rounded-lg text-sm px-5 py-1.5 text-center mr-2">
+                    Profile
+                  </button></a>`;
 }

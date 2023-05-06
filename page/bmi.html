@@ -8,6 +8,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="../source/css/bmi.css" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://i.ibb.co/dmF5XT1/logo-foodie.png"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://fonts.googleapis.com/css?family=Poppins"
+    />
     <title>BMI</title>
   </head>
 
@@ -31,7 +41,7 @@
         </p>
       </div>
 
-      <div id="input-bmi" class="">
+      <div id="input-bmi" class="z-20">
         <form id="form-bmi">
           <div class="flex flex-wrap flex-col lg:flex-row place-content-around">
             <div class="box">
@@ -117,50 +127,76 @@
           </div>
         </form>
       </div>
-      <div id="output-bmi" class="display-none">
-        <div class="wrap">
-          <div id="img" class="box-output one"></div>
-          <div class="box-output two">
-            <div class="title-output">
-              <div id="info-bmi" class="text-3xl info-bmi text-800"></div>
-              <div id="result-value" class="text-3xl value-bmi text-800"></div>
+      <div id="output-bmi" class="relative z-20 mx-4 md:mx-12 hidden">
+        <div
+          class="flex flex-wrap rounded-lg bg-white px-2 border border-gray-400"
+        >
+          <div
+            id="img"
+            class="w-1/2 md:w-1/4 bg-white mx-auto flex justify-center py-2"
+          ></div>
+          <div class="w-1/2 md:w-1/2 bg-white grid content-center px-2">
+            <div class="grid grid-cols-2">
+              <div
+                id="info-bmi"
+                class="text-xl md:text-3xl info-bmi text-800 text-right border-gray-300 border-r-2 pr-2"
+              ></div>
+              <div
+                id="result-value"
+                class="text-xl md:text-3xl value-bmi text-800 text-left pl-2"
+              ></div>
             </div>
-            <p id="text-bmi" class="text-sm text-600"></p>
+            <div class="grid justify-center mt-2 md:mt-4">
+              <p id="text-bmi" class="text-xs md:text-sm text-600"></p>
+            </div>
           </div>
-          <div class="box-output three">
-            <div class="info-weight">
-              <div class="info-weight-body text-700">Kurus</div>
-              <div class="info-weight-number text-700">< 18.5</div>
+          <div
+            class="w-full md:w-1/4 bg-white grid content-center justify-center py-3 md:py-0"
+          >
+            <div class="grid grid-cols-2">
+              <div class="info-weight-body pl-5 text-700 rounded-l-lg">
+                Kurus
+              </div>
+              <div class="info-weight-number rounded-r-lg pr-5 text-700">
+                < 18.5
+              </div>
             </div>
-            <div class="info-weight">
-              <div class="info-weight-body text-700">Normal</div>
-              <div class="info-weight-number text-700">18.5 – 24.9</div>
+            <div class="grid grid-cols-2">
+              <div class="info-weight-body pl-5 text-700 rounded-l-lg">
+                Normal
+              </div>
+              <div class="info-weight-number rounded-r-lg pr-5 text-700">
+                18.5 – 24.9
+              </div>
             </div>
-            <div class="info-weight">
-              <div class="info-weight-body text-700">Gemuk</div>
-              <div class="info-weight-number text-700">25 – 29.9</div>
+            <div class="grid grid-cols-2">
+              <div class="info-weight-body pl-5 text-700 rounded-l-lg">
+                Gemuk
+              </div>
+              <div class="info-weight-number rounded-r-lg pr-5 text-700">
+                25 – 29.9
+              </div>
             </div>
-            <div class="info-weight">
-              <div class="info-weight-body text-700">Obesitas</div>
-              <div class="info-weight-number text-700">> 30</div>
+            <div class="grid grid-cols-2">
+              <div class="info-weight-body pl-5 text-700 rounded-l-lg">
+                Obesitas
+              </div>
+              <div class="info-weight-number pr-5 text-700 rounded-r-lg">
+                > 30
+              </div>
             </div>
           </div>
         </div>
-        <div class="calculate">
+        <div class="mt-20 flex flex-row justify-center">
           <a
             href="weight history.html"
             target="_blank"
             rel="noopener noreferrer"
             decoration="none"
-            style="text-decoration: none"
           >
-            <div class="btn-calculate">History BMI</div>
+            <div class="btn-calculate">Riwayat BMI</div>
           </a>
-          <div
-            class="btn-calculate"
-            style="display: flex; align-items: center; justify-content: center"
-            onclick="back()"
-          >
+          <div class="btn-calculate" onclick="back()">
             <span>Cek ulang</span>
             <i
               class="fas fa-redo-alt"
@@ -169,7 +205,7 @@
           </div>
         </div>
       </div>
-      <div id="qna" class="">
+      <div id="qna" class="z-0">
         <div class="qna-wrap">
           <div id="faq-warp">
             <div class="faq">
@@ -178,7 +214,7 @@
                 Cara penilaian BMI?
               </p>
               <!-- faq answer -->
-              <div class="faq-body w-full md:w-1/2">
+              <div class="faq-body w-full md:w-1/2 z-0">
                 <p class="text-base text-gray-300">
                   BMI diukur dengan cara membandingkan berat badan dengan tinggi
                   badan. Cara ini dapat digunakan untuk orang yang berusia di
@@ -334,47 +370,53 @@
             </div>
           </div>
 
-          <div
-            id="recommend"
-            class="display-none pl-2 w-full md:w-1/2 md:pl-16"
-          >
-            <p class="text-lg text-gray-100">Rekomendasi</p>
-            <ul id="recommend-underweight" class="display-none">
-              <li class="text-gray-300">
+          <div id="recommend" class="hidden px-4 w-full md:w-1/2 md:pl-16">
+            <p class="text-xl text-gray-100 mb-4">Rekomendasi</p>
+            <ul
+              id="recommend-underweight"
+              class="hidden list-outside list-disc pl-2"
+            >
+              <li class="text-gray-300 text-sm md:text-base">
                 Konsumsi makanan sehat dengan frekuensi lebih sering untuk
                 menaikkan berat badan.
               </li>
-              <li class="text-gray-300">
+              <li class="text-gray-300 text-sm md:text-base">
                 Hindari konsumsi obat penambah berat badan instan.
               </li>
-              <li class="text-gray-300">
+              <li class="text-gray-300 text-sm md:text-base">
                 Bentuk tubuh dengan olahraga angkat beban atau fleksibilitas.
               </li>
             </ul>
-            <ul id="recommend-normal" class="display-none">
-              <li class="text-gray-300">
+            <ul
+              id="recommend-normal"
+              class="hidden list-outside list-disc pl-2"
+            >
+              <li class="text-gray-300 text-sm md:text-base">
                 Tetap konsumsi makanan sehat dan bergizi seimbang.
               </li>
-              <li class="text-gray-300">
+              <li class="text-gray-300 text-sm md:text-base">
                 Tetap aktif bergerak 30 menit per hari.
               </li>
             </ul>
-            <ul id="recommend-overweight" class="display-none">
-              <li class="text-gray-300">
+            <ul
+              id="recommend-overweight"
+              class="hidden list-outside list-disc pl-2"
+            >
+              <li class="text-gray-300 text-sm md:text-base">
                 Atur pola makan dengan membatasi konsumsi makanan tinggi kalori,
                 pemanis buatan, dan gula.
               </li>
-              <li class="text-gray-300">
+              <li class="text-gray-300 text-sm md:text-base">
                 Tetap aktif bergerak 30 menit per hari.
               </li>
-              <li class="text-gray-300">
+              <li class="text-gray-300 text-sm md:text-base">
                 Penurunan berat badan yang direkomendasikan adalah 0.5-1 kg
                 setiap pekan.
               </li>
-              <li class="text-gray-300">
+              <li class="text-gray-300 text-sm md:text-base">
                 Hindari konsumsi penurun berat badan instan.
               </li>
-              <li class="text-gray-300">
+              <li class="text-gray-300 text-sm md:text-base">
                 Lakukan olahraga 3-4 kali per minggu selama 30 menit, misalnya
                 bersepeda atau berjalan kaki.
               </li>
@@ -382,7 +424,7 @@
           </div>
         </div>
       </div>
-      <!-- Content -->
+      <!--  -->
     </div>
     <div id="footer"></div>
 

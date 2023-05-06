@@ -3,7 +3,6 @@ const content = document.getElementById("content");
 const isUserLoggedIn = () => {
   let getSession = JSON.parse(localStorage.getItem("sessionData"));
 
-  console.log(getSession);
   if (getSession != null && getSession.isLoggedIn == true) {
     return `<a href="page/bmi.html"><button type="submit"
             class="border-2 border-cyan-900 text-cyan-900 rounded-sm p-2 text-md md:text-lg md:hover:scale-110 transition duration-150 active:bg-cyan-900 active:text-white">Ke
@@ -109,7 +108,7 @@ content.innerHTML = `<div class="container">
             </div>
             </ul>
             <button type="submit"
-              class="p-1.5 w-full text-center mt-10 border border-cyan-900 text-cyan-900 rounded-md text-md transform lg:hover:scale-110 transition active:bg-cyan-900 active:text-white active:text-cyan-900 duration-150">
+              class="p-1.5 w-full text-center mt-10  bg-cyan-900 text-white rounded-md text-md transform opacity-50">
               Pilih
             </button>
           </div>
@@ -126,7 +125,7 @@ content.innerHTML = `<div class="container">
               </ul>
             </div>
             <button type="submit"
-              class="p-1.5 w-full text-center mt-10 border border-cyan-900 text-cyan-900 rounded-md text-md transform lg:hover:scale-110 transition active:bg-cyan-900 active:text-white active:text-cyan-900 duration-150">
+              class="p-1.5 w-full text-center mt-10  bg-cyan-900 text-white rounded-md text-md transform opacity-50">
               Pilih
             </button>
           </div>
@@ -144,7 +143,7 @@ content.innerHTML = `<div class="container">
               </ul>
             </div>
             <button type="submit"
-              class="p-1.5 w-full text-center mt-10 border border-cyan-900 text-cyan-900 rounded-md text-md transform lg:hover:scale-110 transition active:bg-cyan-900 active:text-white active:text-cyan-900 duration-150">
+              class="p-1.5 w-full text-center mt-10  bg-cyan-900 text-white rounded-md text-md transform opacity-50">
               Pilih
             </button>
           </div>

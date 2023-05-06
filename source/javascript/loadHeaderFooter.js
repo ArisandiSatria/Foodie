@@ -1,33 +1,17 @@
 let header = document.getElementById("header");
 let footer = document.getElementById("footer");
 
-const backToIndex = () => {
-  const currentUrl = window.location.href;
-
-  if (currentUrl.includes("/page")) {
-    const newUrl = currentUrl.split("/");
-
-    const index = newUrl.indexOf("page");
-    if (index !== -1) {
-      newUrl.splice(index, newUrl.length - index);
-    }
-    return newUrl.join("/") + "/index.html";
-  } else {
-    return "/index.html";
-  }
-};
+const currentUrl = window.location.href;
 
 header.innerHTML = `
 <nav class="fixed top-0 z-50 w-full bg-cyan-900 border-gray-200 ">
   <div
     class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-5"
   >
-    <a href="${backToIndex()}" class="flex items-center">
-      <img
-        src="https://flowbite.com/docs/images/logo.svg"
-        class="h-8 mr-3"
-        alt="Flowbite Logo"
-      />
+    <a href="${
+      currentUrl.includes("/page") ? "../index.html" : "./index.html"
+    }" class="flex items-center">
+    <img src="https://i.ibb.co/dmF5XT1/logo-foodie.png" alt="logo-foodie" border="0" class="h-10">
       <span
         class="self-center text-2xl font-semibold whitespace-nowrap text-gray-100"
         >Foodie</span
@@ -61,7 +45,7 @@ header.innerHTML = `
       >
         <li>
           <a
-            href="#home"
+            href="${currentUrl.includes("/page") ? "../index.html" : ""}#home"
             class="navbar-item block py-2 pl-3 pr-4 text-gray-100 hover:underline underline-offset-4 rounded md:bg-transparent md:p-0 "
             aria-current="page"
             >Home</a
@@ -69,21 +53,27 @@ header.innerHTML = `
         </li>
         <li>
           <a
-            href="#benefit"
+            href="${
+              currentUrl.includes("/page") ? "../index.html" : ""
+            }#benefit"
             class="navbar-item block py-2 pl-3 pr-4 text-gray-100 hover:underline underline-offset-4 rounded md:bg-transparent md:p-0 "
             >Benefit</a
           >
         </li>
         <li>
           <a
-            href="#package"
+            href="${
+              currentUrl.includes("/page") ? "../index.html" : ""
+            }#package"
             class="navbar-item block py-2 pl-3 pr-4 text-gray-100 hover:underline underline-offset-4 rounded md:bg-transparent md:p-0 "
             >Package</a
           >
         </li>
         <li>
           <a
-            href="#testimony"
+            href="${
+              currentUrl.includes("/page") ? "../index.html" : ""
+            }#testimony"
             class="navbar-item block py-2 pl-3 pr-4 text-gray-100 hover:underline underline-offset-4 rounded md:bg-transparent md:p-0 "
             >Testimony</a
           >
@@ -102,7 +92,9 @@ footer.innerHTML = `<footer class="bg-cyan-900 relative bottom-0 w-full">
   <div class="mx-auto w-full max-w-screen-xl text-center p-5 py-6 lg:py-8">
     <span class="text-sm text-gray-300x text-white"
       >© 2023
-      <a href="https://flowbite.com/" class="hover:underline">Foodie</a>. All
+      <a href="${
+        currentUrl.includes("/page") ? "../index.html" : "./index.html"
+      }" class="hover:underline">Foodie</a>. All
       Rights Reserved.
     </span>
   </div>

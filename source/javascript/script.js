@@ -8,8 +8,6 @@ function checkTitle() {
   }
 }
 
-// console.log(checkTitle());
-
 // Memanggil file homepage.js
 document.write(
   `<script src="${checkTitle()}source/javascript/homePage.js"></script>`
@@ -44,7 +42,6 @@ document.write(
   `<script src="${checkTitle()}source/javascript/logic/profile.js"></script>`
 );
 
-
 window.onload = function () {
   let navbarItems = document.querySelectorAll(".navbar-item");
   for (let i = 0; i < navbarItems.length; i++) {
@@ -67,3 +64,5 @@ window.onload = function () {
     });
   }
 };
+
+
