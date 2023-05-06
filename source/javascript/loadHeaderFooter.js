@@ -76,8 +76,8 @@ header.innerHTML = `
         </li>
         
         <li id="access">
-        <button  type="button" class="text-white font-semibold bg-yellow-500 hover:bg-yellow-400 0 rounded-lg text-sm px-5 py-1.5 text-center mr-2">
-        <a  href="page/onboarding-page.html">Login</a></button>
+        <a  href="page/onboarding-page.html"><button type="button" class="text-white font-semibold bg-yellow-500 hover:bg-yellow-400 0 rounded-lg text-sm px-5 py-1.5 text-center mr-2">
+        Login</button></a>
         </li>
         </ul>
     </div>
